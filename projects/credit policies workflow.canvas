@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"52bc6ff9a9f85eb8","type":"text","text":"Agent","x":280,"y":-120,"width":340,"height":60},
+		{"id":"623c8245c26d55a8","type":"text","text":"[[MCP]]","x":280,"y":-20,"width":340,"height":80},
+		{"id":"080abc08fce780b0","type":"text","text":"Credit policies tool","x":280,"y":100,"width":340,"height":60},
+		{"id":"be7fa039b211feba","type":"text","text":"Enrichment","x":40,"y":-120,"width":200,"height":60},
+		{"id":"6936fc49e43f2b7a","type":"text","text":"[[Online Feature Store]]\n[[AWS DynamoDB]]","x":40,"y":-20,"width":200,"height":80},
+		{"id":"28153b60d20f6765","type":"text","text":"excel file","x":-120,"y":-120,"width":110,"height":60},
+		{"id":"4a9ee6dff63a04e8","x":280,"y":-220,"width":340,"height":60,"type":"text","text":"[[RAG (Retrieval-Augmented Generation)]]\n[[Postgres PGVector]]"},
+		{"id":"060e242f818162d4","type":"text","text":"[[AWS SQS]]","x":660,"y":-120,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"677b59785416ed78","fromNode":"52bc6ff9a9f85eb8","fromSide":"bottom","toNode":"623c8245c26d55a8","toSide":"top"},
+		{"id":"47ff680289fdf8d0","fromNode":"28153b60d20f6765","fromSide":"right","toNode":"52bc6ff9a9f85eb8","toSide":"left"},
+		{"id":"d5cfa37b70a4f6d4","fromNode":"623c8245c26d55a8","fromSide":"bottom","toNode":"080abc08fce780b0","toSide":"top"},
+		{"id":"a7570fe4f15aa4f4","fromNode":"080abc08fce780b0","fromSide":"top","toNode":"623c8245c26d55a8","toSide":"bottom"},
+		{"id":"45c7ce1990ca1bc8","fromNode":"623c8245c26d55a8","fromSide":"top","toNode":"52bc6ff9a9f85eb8","toSide":"bottom"},
+		{"id":"5048aecf13fd8020","fromNode":"be7fa039b211feba","fromSide":"bottom","toNode":"6936fc49e43f2b7a","toSide":"top"},
+		{"id":"c0cadc5d0f644c61","fromNode":"52bc6ff9a9f85eb8","fromSide":"right","toNode":"060e242f818162d4","toSide":"left"},
+		{"id":"5f238dbe76c1a1a5","fromNode":"52bc6ff9a9f85eb8","fromSide":"top","toNode":"4a9ee6dff63a04e8","toSide":"bottom"},
+		{"id":"31c3ce9b675278ca","fromNode":"4a9ee6dff63a04e8","fromSide":"bottom","toNode":"52bc6ff9a9f85eb8","toSide":"top"}
+	]
+}
