@@ -6,4 +6,4 @@ Better than [[Pandas]] and [[SQLite]]
 ## Ideal use cases
 [[Data analytics]], [[Local ETL pipelines]], [[exploratory data science]]
 ## Example
-[[data architecture/database analytical/DuckDB/DuckDB example.ipynb]]
+[[DuckDB example.ipynb]]
