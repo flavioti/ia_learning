@@ -1,5 +1,8 @@
+Allows [[Orchestration]] of linear workflows
+
 [[AI agent]]
 from [[LangChain Inc]]
+[[LCEL - LangChain Expression Language]]
 
 ```mermaid
 flowchart LR
@@ -56,3 +59,19 @@ diplay(Image(agent.get_graph().draw_mermaid_png()))
 
 Examples:
 [[ExampleLangchainCreateAgent.ipynb]]
+
+
+## Notes
+
+[[AIMessage]]
+[[ToolMessage]]
+[[HumanMessage]]
+[[SystemPrompt]]
+[[Checkpointer]]
+[[Middleware]]
+
+
+## Embeddings
+
+LangChain does not generate embeddings itself, when you call an embedding class (like OpenAIEmbeddings or OllamaEmbeddings), it is simply acting as a client wrapper around a specialized [[Embedding model]].
+

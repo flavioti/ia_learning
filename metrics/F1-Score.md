@@ -1,4 +1,5 @@
 #metric
+
 Balance betwen [[Precision]] and [[Recall]], the harmonic mean.
 
 $$

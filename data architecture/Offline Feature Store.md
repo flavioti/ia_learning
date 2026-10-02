@@ -1,0 +1,7 @@
+- [[Apache Iceberg]]
+	- [[point-in-time]]
+- Query with SQL on [[AWS Athena]]
+- Store files on [[AWS S3]]
+- Data Quality gate
+	- [[Population Stability Index (PSI)]]
+	- Fixed data check (null, type check)

@@ -1,0 +1,1 @@
+Is the result of [[Context Summarization]], reading old messages and compressing in a summary text.

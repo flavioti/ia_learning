@@ -1,0 +1,1 @@
+The application or microservice that creates and sends the message.

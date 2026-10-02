@@ -1,4 +1,4 @@
-#sdd 
+#ai #sdd 
 
 - Is a metodology where a specification is the primary artifact, and the  source code is the expression
 - Inverse traditional flow: Instead of "code first, document later", is "specify first, code after"

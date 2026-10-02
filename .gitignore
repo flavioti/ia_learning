@@ -10,6 +10,9 @@
 /.obsidian/app.json
 /.obsidian/appearance.json
 .env
-**/*-*-*.md
+**/2026-*-*.md
 **/*.png
 **/*TODO*.md
+**/*temp*
+**/interviews
+.obsidian/plugins/

@@ -1,0 +1,1 @@
+Vision models are **multimodal models** that can "see" and process visual input—such as images, screenshots, diagrams, and PDF pages—alongside text prompts.

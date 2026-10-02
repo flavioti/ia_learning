@@ -1,3 +1,4 @@
+#ai 
 Is a collection of markdown files, instructions for change the model behavior.
 > Isn't a endpoint, function or code
 
