@@ -9,3 +9,7 @@
 /.obsidian/community-plugins.json
 /.obsidian/app.json
 /.obsidian/appearance.json
+.env
+**/*-*-*.md
+**/*.png
+**/*TODO*.md

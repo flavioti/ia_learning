@@ -1,4 +1,3 @@
-
 $$
 \begin{aligned}
 \text{Precision} &= \frac{\text{TP}}{\text{TP} + \text{FP}} \\[1.5em]
