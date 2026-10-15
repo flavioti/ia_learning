@@ -17,6 +17,6 @@
 |                 | [[mxbai-embed-large]]      |      |         |                |
 |                 | [[all-minilm]]             |      |         |                |
 |                 | [[bge-m3]]                 |      |         |                |
-| [[OpenAI Inc]]] | [[text-embedding-3-small]] |      |         | 1.536          |
+| [[OpenAI]]] | [[text-embedding-3-small]] |      |         | 1.536          |
 |                 | [[all-MiniLM-L6-v2]]       |      |         | 384            |
 ***Dimension size***: Embedding model's output vector lenght

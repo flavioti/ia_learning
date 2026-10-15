@@ -1,12 +1,12 @@
 {
 	"nodes":[
-		{"id":"ea67453b6a25ad99","type":"file","file":"data drift.md","x":120,"y":-220,"width":400,"height":300},
+		{"id":"ea67453b6a25ad99","type":"file","file":"data architecture/data drift.md","x":120,"y":-220,"width":400,"height":300},
 		{"id":"f3cb73692e3ac48b","x":560,"y":-220,"width":400,"height":300,"color":"4","type":"file","file":"data architecture/Offline Feature Store.md"},
 		{"id":"0aae3418cc4859e0","x":1080,"y":-220,"width":400,"height":300,"color":"4","type":"file","file":"data architecture/Online Feature Store.md"},
-		{"id":"688d83fade5178a3","x":120,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"champion and challenger.md"},
-		{"id":"7c9f798497d281db","x":560,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"deployment strategies.md"},
-		{"id":"c07866025c48253b","x":-320,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"ML model quality.md"},
-		{"id":"101ec648f204481b","x":-760,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"model registry.md"},
+		{"id":"688d83fade5178a3","x":120,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"machine learning/champion and challenger.md"},
+		{"id":"7c9f798497d281db","x":560,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"software architecture/architecture/deployment strategies.md"},
+		{"id":"c07866025c48253b","x":-320,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"machine learning/ML model quality.md"},
+		{"id":"101ec648f204481b","x":-760,"y":440,"width":400,"height":300,"color":"6","type":"file","file":"machine learning/model registry.md"},
 		{"id":"72dd31bb2c2c61b3","type":"file","file":"interviews/FullStack Labs position.md","x":-760,"y":-220,"width":400,"height":580},
 		{"id":"b621f3ab9a6137a0","type":"file","file":"interviews/FullStack Labs first interview.md","x":-320,"y":-220,"width":400,"height":580}
 	],

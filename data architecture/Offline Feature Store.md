@@ -1,7 +1,10 @@
 - [[Apache Iceberg]]
-	- [[point-in-time]]
+	- [[point-in-time]] (time travel)
+		- Feature Snapshot ID
 - Query with SQL on [[AWS Athena]]
 - Store files on [[AWS S3]]
 - Data Quality gate
 	- [[Population Stability Index (PSI)]]
 	- Fixed data check (null, type check)
+- [[Data Lineage]]
+- 

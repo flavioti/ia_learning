@@ -1,4 +1,4 @@
-[[vector]] | [[embeddings (vector)]]
+[[vector]] | [[embeddings]]
 
 Is a specialized storage system designed to capture, index, and query data as high-dimensional vectors, commonly know as embeddings, Unlike tradicional databases that store data in rigid rows and columns or text documents, vector database are purpose-build to handle unstructured data like text, images, video, and audio by turning them into numerical representations.
 
@@ -12,7 +12,7 @@ The core breakthrough of this technology is **semantic search**. Instead of sear
 ## Key use cases
 
 Vector databases have become a critical pillar of modern Artificial Intelligence and machine learning applications:
-- ***[[RAG (Retrieval-Augmented Generation)]]***
+- ***[[RAG]]***
 - ***[[Recomendation systems]]
 - ***[[Multimodal search]]***
 

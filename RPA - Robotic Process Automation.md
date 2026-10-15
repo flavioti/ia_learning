@@ -1,0 +1,1 @@
+_método para automatizar processos transacionais baseados em regras específicas_.

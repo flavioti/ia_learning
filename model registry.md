@@ -1,2 +1,0 @@
-- Control the model lifecycle
-	- [[ML model quality]]

@@ -1,0 +1,2 @@
+A [[Harness]] can save workflow state outside the model, after an interruption, it can reload that checkpoint and continue.
+A support agent, for example, can resume drafting with its earlier order lookup result available.

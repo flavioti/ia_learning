@@ -1,0 +1,1 @@
+AWS Certified AI Practitioner validates foundational knowledge of artificial intelligence (AI), machine learning (ML), and generative AI concepts and use cases for AWS Services. This is a good starting point for individuals exploring AI/ML on AWS, whether adding AI skills to an existing cloud career or beginning to work with AI/ML technologies.

@@ -1,0 +1,14 @@
+/* Forçar uma fonte padrão elegante em todos os diagramas 
+.mermaid {
+  --mermaid-font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.theme-dark .mermaid > svg {
+  filter: var(--mermaid-filter, none);
+}
+
+.mermaid .node rect, .mermaid .node circle {
+  stroke-width: 1.5px !important;
+}
+
+*/

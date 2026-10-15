@@ -1,1 +1,0 @@
-Every interaction (message) to a model (API request)

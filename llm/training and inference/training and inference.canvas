@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"e47cea50404f57e1","x":0,"y":0,"width":400,"height":400,"type":"file","file":"llm/training and inference/LLM training.md"},
+		{"id":"347d0b44a46fd2d1","x":-480,"y":0,"width":400,"height":400,"type":"file","file":"llm/training and inference/Tokenizer training.md"},
+		{"id":"efd5467972aa6271","x":0,"y":460,"width":400,"height":400,"type":"file","file":"llm/training and inference/LLM inference.md"}
+	],
+	"edges":[
+		{"id":"651c37f72f344d6b","fromNode":"347d0b44a46fd2d1","fromSide":"right","toNode":"e47cea50404f57e1","toSide":"left"},
+		{"id":"3a66d7b4d26e8d65","fromNode":"e47cea50404f57e1","fromSide":"bottom","toNode":"efd5467972aa6271","toSide":"top"}
+	]
+}

@@ -1,0 +1,1 @@
+>[!tip] Is a [[Context Management]], but for individual session (not share)

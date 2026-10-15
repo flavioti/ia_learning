@@ -18,7 +18,7 @@ Notification - End
 
 ## Models available
 
-[[Anthropic - Opus 5.x]]
+[[Opus 5.x]]
 [[Anthropic - Fable 5.x]]
 
 ## Install

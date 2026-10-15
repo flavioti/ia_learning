@@ -1,0 +1,1 @@
+- Can be a consumer group, several clients can read the same message

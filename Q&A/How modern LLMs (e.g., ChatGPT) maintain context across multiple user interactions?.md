@@ -1,7 +1,7 @@
 #memory #in-context_learning 
 ## Intro
 
-> **Answer**: It uses [[Context window]].
+> **Answer**: It uses [[Context Management]].
 
 Modern LLMs maintain context across multiple interactions not by possessing persistent internal memory, but by receiving the entire conversation history re-submitted alongside every new message in a single prompt payload.
 

@@ -6,7 +6,7 @@
 		{"id":"be7fa039b211feba","type":"text","text":"Enrichment","x":40,"y":-120,"width":200,"height":60},
 		{"id":"6936fc49e43f2b7a","type":"text","text":"[[Online Feature Store]]\n[[AWS DynamoDB]]","x":40,"y":-20,"width":200,"height":80},
 		{"id":"28153b60d20f6765","type":"text","text":"excel file","x":-120,"y":-120,"width":110,"height":60},
-		{"id":"4a9ee6dff63a04e8","x":280,"y":-220,"width":340,"height":60,"type":"text","text":"[[RAG (Retrieval-Augmented Generation)]]\n[[Postgres PGVector]]"},
+		{"id":"4a9ee6dff63a04e8","x":280,"y":-220,"width":340,"height":60,"type":"text","text":"[[RAG]]\n[[Postgres PGVector]]"},
 		{"id":"060e242f818162d4","type":"text","text":"[[AWS SQS]]","x":660,"y":-120,"width":250,"height":60}
 	],
 	"edges":[

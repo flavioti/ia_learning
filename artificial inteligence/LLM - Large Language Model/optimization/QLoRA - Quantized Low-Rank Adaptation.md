@@ -1,3 +1,0 @@
-#ModelOptimization
-
-A [[PEFT]] strategy
