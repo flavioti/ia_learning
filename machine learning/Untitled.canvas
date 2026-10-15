@@ -1,8 +1,0 @@
-{
-	"nodes":[
-		{"id":"e47dfeb9eec83010","x":-250,"y":-420,"width":250,"height":60,"type":"text","text":"Categórica nominal"},
-		{"id":"1f62218d5677853f","type":"text","text":"Categórica ordinal","x":-250,"y":-340,"width":250,"height":60},
-		{"id":"a18d26920e9999cd","type":"text","text":"Categórica numéricas","x":-460,"y":-240,"width":250,"height":60}
-	],
-	"edges":[]
-}

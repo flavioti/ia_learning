@@ -1,4 +1,4 @@
-[[System One]] [[LLM-as-a-judge]] [[decision model]]
+[[System One]] [[llm/prompt evaluation/LLM-as-a-judge]] [[decision model]]
 
 fork from [[Qwen3.5-9B]]
 
