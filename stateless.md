@@ -1,0 +1,1 @@
+[[LLM model]] is stateless, they need external tools to build up a memory

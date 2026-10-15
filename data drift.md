@@ -1,0 +1,4 @@
+- compare the [[statistical distribution]] of real-time production data against reference [[training data]]. 
+- statistical tests like [[Kolmogorov Smirnov (KS)]]
+- metrics like [[Population Stability Index (PSI)]] to quantify the change
+- use observability frameworks or model monitoring services

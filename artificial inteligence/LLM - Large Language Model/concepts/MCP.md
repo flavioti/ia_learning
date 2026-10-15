@@ -1,0 +1,2 @@
+#ai 
+Suggested framework: [[FastMCP]]

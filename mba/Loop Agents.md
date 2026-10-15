@@ -1,4 +1,4 @@
-#development #generative_ai #spec-driven-development
+#ai #development #generative_ai #spec-driven-development
 
 Development strategy to create huge projects, that needs hours or day do be done. A standard method to create markdown documents to instruct the IA to complete each task.
 

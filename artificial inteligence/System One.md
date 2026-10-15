@@ -1,0 +1,1 @@
+Is a psychological concept that describes the brain’s fast, automatic, and subconscious mode of thinking.

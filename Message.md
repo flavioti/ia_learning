@@ -1,0 +1,1 @@
+The actual payload of data being transferred (usually formatted in JSON, XML, or Avro).
