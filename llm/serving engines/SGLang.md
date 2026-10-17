@@ -6,5 +6,5 @@
 - **Structured Output & Control:** Features a front-end language and scheduler-level constrained decoding using compressed finite state machines to reliably and rapidly enforce structured outputs like JSON.
 - **Best Used For:** [[multi-step agentic workflows]], [[RAG]], [[multi-turn conversational chatbots]], and [[heavy context reuse]].
 
-[[LLM Infrastructure]]
+[[LLM Inference Infrastructure]]
 [[Key-Value caching]]

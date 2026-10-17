@@ -13,3 +13,13 @@ $$
 [[Precision]]
 [[Recall]]
 
+
+## Regression
+[[Evaluating regression model metrics]]
+[[MAE - Mean Absolute Error]]
+[[MSE - Mean Squared Error]]
+[[RMSE - Root Mean Squared Error]]
+[[R-squared]]
+[[Adjusted R-squared]]
+[[Akaike Information Criterion]]
+[[Bayesian Information Criterion]]

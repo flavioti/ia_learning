@@ -1,6 +1,6 @@
 #platform #observability #trace #test #model #evaluate #monitoring
 
-A commercial tool built by the [[provider - framework/LangChain Inc|LangChain Inc]] team for debbuging, testing, evaluating, and monitoring AI applications and language models.
+A commercial tool built by the [[LangChain Inc|LangChain Inc]] team for debbuging, testing, evaluating, and monitoring AI applications and language models.
 
 
 > [!NOTE] 

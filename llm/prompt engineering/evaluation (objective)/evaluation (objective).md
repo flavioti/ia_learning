@@ -1,2 +1,2 @@
-- [[Precision]], [[Recall]], [[F1-Score]], [[accuracy]]
+- [[Precision]], [[Recall]], [[F1-Score]], [[llm/prompt engineering/evaluation (objective)/accuracy]]
 - 

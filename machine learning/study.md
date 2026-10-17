@@ -16,3 +16,6 @@ Machine Learning
 	- metrics
 
 [[Categorical columns]]
+
+[[ROC-AUC]]
+[[machine learning/quality/development/Accuracy|Accuracy]]

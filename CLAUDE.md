@@ -181,6 +181,33 @@ done
 4. **Gradual expansion**: Most files are intentionally brief; expand based on priority and depth needed
 5. **Interview tracking**: Use the status subdirectories for organizing interview materials
 6. **Provider-specific notes**: Keep AI provider and cloud provider materials separate for clarity
+7. **No Apple silicon platform notes**: Do not mention Apple silicon (MLX, `mps`, Metal, M-series) in install instructions, code examples, device selection or platform comparison tables. Cover Linux (CPU and NVIDIA CUDA) only, unless the user explicitly asks for it
+
+---
+
+## Documentation & Visualization Guidelines
+
+### Diagrams & Complex Visualizations
+
+**Always generate PNG images for complex diagrams** rather than ASCII or Mermaid when:
+- ✅ Showing actual data visualizations (curves, charts, graphs)
+- ✅ Creating professional-looking diagrams (ROC curves, distributions, heatmaps)
+- ✅ Multiple elements need color coding and styling
+- ✅ Visual clarity is important for understanding
+
+**Use for simpler cases:**
+- Mermaid: Flowcharts, simple architecture diagrams, decision trees
+- ASCII: Quick sketches, temporary placeholders only
+
+### PNG Generation Process
+
+1. **Generate Python script** using `matplotlib`, `seaborn`, or similar
+2. **Install dependencies** in `.venv` if needed: `.venv/bin/pip install <package>`
+3. **Execute script** to create PNG: `.venv/bin/python3 script_name.py`
+4. **Save to vault root** or appropriate folder
+5. **Embed in markdown**: `![Description](diagram.png)`
+
+**Example:** See `[[machine learning/quality/development/ROC-AUC.md]]` for a professional ROC Curve PNG
 
 ---
 

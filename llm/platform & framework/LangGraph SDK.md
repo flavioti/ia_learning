@@ -5,5 +5,5 @@ Allow [[Orchestration]] of complex workflows with [[Graphs]], [[native memory pe
 
 [[Orchestration]]
 [[Graphs]]
-[[provider - framework/LangChain Inc]]
+[[LangChain Inc]]
 [[LLMOps]]

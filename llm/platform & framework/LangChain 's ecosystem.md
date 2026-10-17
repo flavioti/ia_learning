@@ -1,4 +1,4 @@
-[[provider - framework/LangChain Inc]]
+[[LangChain Inc]]
 
 [[LangChain SDK]]
 [[LangChain community]]

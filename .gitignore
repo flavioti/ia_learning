@@ -17,3 +17,5 @@
 **/interviews
 .obsidian/plugins/
 .claudian/
+.vscode/
+.obsidian/

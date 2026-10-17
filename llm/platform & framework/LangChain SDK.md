@@ -3,7 +3,7 @@
 Allows [[Orchestration]] of linear workflows
 
 [[AI Agent]]
-from [[provider - framework/LangChain Inc]]
+from [[LangChain Inc]]
 [[LangChain Expression Language]]
 
 ```mermaid

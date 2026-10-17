@@ -8,7 +8,7 @@ A bridge between [[Data Science]] and [[DevOps Engineer]] (often called [[MLOps 
 
 - Notebooks: Web-based development environment ([[Jupyter Notebook]], RStudio, [[VSCode]]).
 - Pipelines (KFP): end-to-end ML workflows, preprocessing, [[model training]], and [[ML model evaluation]]
-- Katib: automated tool for [[ML hyperparameter tuning]]
+- Katib: automated tool for [[hyperparameter tuning]]
 - Training operators: distributed training jobs for popular frameworks like [[TensorFlow]], [[PyTorch]], and [[MXNet]]
 - KServe (KFServing): tool for deploying trained models at scale, [[ML model serving]], [[auto-scaling]] (down to zero when not in use), and [[ML monitoring]].
 

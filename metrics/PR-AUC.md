@@ -9,3 +9,5 @@ Is a single-number metric used to evaluate binary classification models by measu
 ### Why PR-AUC matters
 **Imbalanced Data**: It is the preferred metric when with heavly imbalanced datasets, where the positive class is rare (such as a fraud detection, rare disease screening, or anomaly detection).
 **Ignoring True Negatives**: Unlike [[ROC-AUC]], PR-AUC completely ignores true negatives. Because imbalanced datasets feature an overwhelming majority of negative cases, including true negatives in ROC-AUC can inflate performance scores and create a false sense of security. PR-AUC zeroes in strictly on performance regarding the minority positive class.
+
+[[ML metrics]]

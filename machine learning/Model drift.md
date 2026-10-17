@@ -1,1 +1,0 @@
-**Decaimento de Desempenho (_Model Drift_):** Ao contrário de softwares convencionais, a precisão do modelo degrada com o tempo devido às mudanças no comportamento do mundo real. Se o modelo não for atualizado ([[model training]], o ROI cai progressivamente.
