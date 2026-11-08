@@ -13,3 +13,7 @@
 - Cache what you reuse
 - re partition vs coalesce
 - Avoid python UDFs
+
+
+## Links
+- [[data architecture/Apache Spark/Spark Joins.md|Spark Joins]]

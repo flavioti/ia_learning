@@ -1,8 +1,12 @@
+---
+aliases:
+  - Discretização
+---
 # Discrete Variable
 
 A **discrete variable** is a numeric variable that takes only **specific, separate values**, usually whole numbers obtained by **counting**. There are gaps between possible values: a user can make 2 or 3 purchases, never 2.5.
 
-Related: [[Continuous Variable]] · [[Categorical columns]] · [[feature engineering]]
+Related: [[Continuous Variable]] · [[Categorical columns]] · [[Feature Engineering]]
 
 ---
 

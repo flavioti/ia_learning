@@ -1,1 +1,5 @@
+---
+aliases:
+  - DL
+---
 [[Machine Learning]]

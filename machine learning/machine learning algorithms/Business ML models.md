@@ -1,0 +1,7 @@
+[[anomaly detection]]
+[[application]]
+[[behavior]]
+[[Churn]]
+[[collection]]
+[[Credit Risk]]
+[[fraud detection]]

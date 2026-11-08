@@ -4,7 +4,7 @@ Question: How to work with timeout in a HTTP request with Go language
 Answer A: `context.WithTimeout`
 Answer B: `time.Sleep`
 
-Kind of evaluation: [[metrics/Correctness|Correctness]]
+Kind of evaluation: [[Correctness|Correctness]]
 Result: `{"key": "pairwise_preference", "value": "A"}`
 
 ```mermaid

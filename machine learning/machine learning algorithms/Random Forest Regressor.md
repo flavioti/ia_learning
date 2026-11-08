@@ -1,0 +1,5 @@
+---
+aliases:
+  - RandomForestRegressor
+---
+#supervised-learning 

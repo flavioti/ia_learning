@@ -1,42 +1,39 @@
 # Categorical Columns
 
+Categorical columns hold **labels or groups instead of numbers**, such as country, color or membership tier. Models can't use the labels directly, so you **encode** them as numbers, for example with one-hot or ordinal encoding.
+
+>[!tip] Encode columns values to numbers, so the algorithm can understand
+
 ## 1. By Order (Primary Classification)
 
 | Type        | Definition                           | Examples                                    | Encoding                                | ML Impact                                                             |
 | ----------- | ------------------------------------ | ------------------------------------------- | --------------------------------------- | --------------------------------------------------------------------- |
 | **Nominal** | No inherent order between categories | color, country, gender, brand               | One-hot, label (with caution)           | Trees handle naturally; linear models need one-hot                    |
 | **Ordinal** | Natural ordering between categories  | education level, rating, shirt size (S<M<L) | Ordinal encoding, one-hot (loses order) | Ordinal encoding preserves relationship; important for distance-based |
-
 ## 2. By Number of Categories
 
 | Type | Definition | Examples | Encoding | Cardinality |
 |------|-----------|----------|----------|------------|
 | **Binary** | Exactly 2 categories | yes/no, true/false, male/female | 0/1, boolean | 2 values |
 | **Multiclass** | More than 2 categories | countries, product types, segments | One-hot, label, target encoding | >2 values |
-
 ## 3. By Cardinality (Unique Values)
 
 | Type | Definition | Examples | Safe for One-Hot? | Best Encoding |
 |------|-----------|----------|------------------|----------------|
 | **Low Cardinality** | Few unique values (< 20) | country, gender, category | ✅ Yes | One-hot encoding |
 | **High Cardinality** | Many unique values (1000s+) | user ID, address, postal code | ❌ No | Target encoding, embeddings, frequency encoding |
-
 ## 4. By Temporal/Cyclic Nature
 
 | Type | Definition | Examples | Encoding | Why Important |
 |------|-----------|----------|----------|---------------|
 | **Cyclic** | Categories that repeat | month, day of week, season, hour | Sine/cosine transform, circular one-hot | Dec ≠ Jan distance should be 1, not 11 |
 | **Non-Cyclic** | Regular categories | color, country, category | Standard one-hot or ordinal | Regular distance metrics apply |
-
 ## 5. By Relationship Structure
 
 | Type | Definition | Examples | Encoding |
 |------|-----------|----------|----------|
 | **Hierarchical** | Parent-child relationships | Country→State→City, Category→Subcategory | Target encoding respecting hierarchy, graph embeddings |
 | **Independent** | No relationships | gender, color, brand | Standard encoding (one-hot, ordinal) |
-
----
-
 ## Encoding Strategy by Type
 
 | Categorical Type | Best Encoding | Tree-Based | Linear Models | Distance-Based | Neural Networks |
@@ -46,9 +43,6 @@
 | High Cardinality | Target, Embeddings | ✅ Native | ✅ Recommended | ✅ Reduces dims | ✅ Embeddings |
 | Cyclic | Sine/Cosine | ✅ Native | ✅ Recommended | ✅ Captures cycle | ✅ Embeddings |
 | Binary | 0/1 or Label | ✅ Native | ✅ Native | ✅ Native | ✅ Native |
-
----
-
 ## Fictional Dataset Example: E-commerce Customer Dataset
 
 Complete example showing all categorical variable types:
@@ -62,7 +56,6 @@ Complete example showing all categorical variable types:
 | CUST005 | White | Adidas | Canada | Medium | Inactive | Friday | Spring | Standard | Apparel | 2 Stars | Bronze |
 | CUST006 | Yellow | Reebok | France | High | Active | Saturday | Summer | Premium | Accessories | 4 Stars | Silver |
 | CUST007 | Purple | Nike | Australia | Medium | Active | Sunday | Fall | Standard | Shoes | 3 Stars | Gold |
-
 ### Column Classification:
 
 | Column                | Type    | Subtype      | Values                                                 | Cardinality | Encoding Suggestion      | Exemplo de Encoding                                    |

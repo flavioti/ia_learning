@@ -1,1 +1,0 @@
-![[data architecture/kafka/Kafka topics]]

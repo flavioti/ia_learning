@@ -1,6 +1,6 @@
 #machine-learning #forecasting #time-series
 
-The ability of a [[time series forecasting]] model to use **extra variables (covariates)** alongside the series it predicts, instead of looking only at the target's own history.
+The ability of a [[Time series forecasting]] model to use **extra variables (covariates)** alongside the series it predicts, instead of looking only at the target's own history.
 
 >[!tip] A **covariate** is any additional, [[time-aligned variable]] that may explain or influence the target.
 

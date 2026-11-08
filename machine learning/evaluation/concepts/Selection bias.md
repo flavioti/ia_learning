@@ -1,0 +1,1 @@
+the training data only has cars that **were sold**. Cars that stayed unsold (often the overpriced ones) have no label, so the model never learns from its worst mistakes.

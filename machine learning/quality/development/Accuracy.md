@@ -1,5 +1,8 @@
-[[model training]]|[[Model drift]]
-
+---
+aliases:
+  - train accuracy
+  - test accuracy
+---
 **Accuracy** é a **porcentagem de previsões corretas** que o modelo faz. Existem dois tipos críticos:
 
 - **Train Accuracy** = Avaliado em dados de **treino** (para diagnóstico)
@@ -123,12 +126,12 @@ Diagnóstico: Modelo não aprendeu bem
 
 ### Test Accuracy (Métrica Real)
 
-| Valor | Significado |
-|-------|------------|
-| **> 95%** | Excelente (problema fácil ou separação perfeita) |
-| **80-95%** | Muito bom (modelo generalizou bem) ✅ |
-| **60-80%** | Aceitável (depende do problema) |
-| **< 60%** | Baixa (modelo precisa melhorar) |
+| Valor      | Significado                                      |
+| ---------- | ------------------------------------------------ |
+| **> 95%**  | Excelente (problema fácil ou separação perfeita) |
+| **80-95%** | Muito bom (modelo generalizou bem) ✅             |
+| **60-80%** | Aceitável (depende do problema)                  |
+| **< 60%**  | Baixa (modelo precisa melhorar)                  |
 
 ---
 
@@ -219,4 +222,4 @@ else:
 | Reporte | Não | **Sempre** ✅ |
 | Regra | Train ≥ Test sempre | Sempre > 70% |
 
-[[ML metrics]]
+[[Evaluation classification model metrics]]

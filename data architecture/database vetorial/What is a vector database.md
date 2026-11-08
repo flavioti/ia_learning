@@ -8,7 +8,7 @@ The core breakthrough of this technology is **semantic search**. Instead of sear
 
 1. ***Creating Embeddings***: An AI model process unstructured data - like a sentence or an image - and translates it into a long string of numbers (a vector). This vector represents the mathematical meaning of the data.
 2. ***The vector space***: The vector are placed into a mult-dimensional map. Data points with similar meanings or contexts (e.g., the word "puppy" and a photo of a golden retriever) are **plotted geometrically close to one another**.
-3. ***Similarity search***: When you run a query, the database converts syour search term into a vector, measures the mathematical distance to the other vectors (using metrics like [[cosine similarity]]), and instantly returns the closest matches.
+3. ***Similarity search***: When you run a query, the database converts syour search term into a vector, measures the mathematical distance to the other vectors (using metrics like [[Cosine similarity]]), and instantly returns the closest matches.
 ## Key use cases
 
 Vector databases have become a critical pillar of modern Artificial Intelligence and machine learning applications:

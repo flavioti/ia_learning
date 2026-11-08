@@ -19,6 +19,8 @@ import pandas as pd
 | Aggregation | All the unique values, sorted alphabetically                                                         | `df['column'].unique().sort()`                                      |
 | Transform   | Convert categorical variable into dummy/indicator variables.                                         | `df.get_dummies(df, drop_first=True)`                               |
 | Show        | Print summary statistics                                                                             | `df["a_column"].describe()`                                         |
+| Filter      | Return cols that contains one o more missing values                                                  | `df[col].isnull().any()`                                            |
+| Drop        | Drop column by type                                                                                  | `df.select_dtypes(exclude=['object'])`                              |
 ## Normalizing
 
 | Description            | Command                                                                                                           |

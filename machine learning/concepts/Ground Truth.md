@@ -327,7 +327,7 @@ Amazon Mechanical Turk:
 
 ---
 
-## Ground Truth em Produção ([[Monitorar accuracy em produção continuamente|Monitoring]])
+## Ground Truth em Produção ([[Monitor Accuracy in Production Continuously|Monitoring]])
 
 ```
 Ideal:           Realidade:
@@ -342,7 +342,7 @@ Tempo Real       Latência de dias/semanas
 ```
 
 **Soluções:**
-- Usar [[Monitorar accuracy em produção continuamente|proxy metrics]] enquanto aguarda truth
+- Usar [[Monitor Accuracy in Production Continuously|proxy metrics]] enquanto aguarda truth
 - Monitorar distribuição dos dados (mais rápido)
 - Usar modelo de confiança como alerta rápido
 

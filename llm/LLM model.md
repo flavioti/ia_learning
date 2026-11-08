@@ -2,5 +2,5 @@
 
 ## Metrics
 
-[[llm/prompt engineering/evaluation (objective)/accuracy]]
+[[machine learning/quality/development/Accuracy|Accuracy]]
 [[LLM Latency]]

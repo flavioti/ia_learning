@@ -78,7 +78,7 @@ CONCLUSÃO: Reporte sempre Test Accuracy!
 
 ## Validação Adicional: Cross-Validation
 
-Para datasets pequenos, use [[k-fold cross-validation]] em vez de apenas 70/30:
+Para datasets pequenos, use [[K-Fold Cross-Validation]] em vez de apenas 70/30:
 
 ```
 Dataset ─┬─ Fold 1: Train com 4, Test com 1

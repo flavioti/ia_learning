@@ -1,3 +1,7 @@
+---
+aliases:
+  - Natural Language Processing
+---
 # Natural Language Processing
 
 Is the broader field focused on enabling computers to understand, interpret, and generate human language. NLP encompasses many techniques and tasks such as [[sentiment analysis]], [[named entity recognition]], and [[machine translation]].

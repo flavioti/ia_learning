@@ -9,7 +9,7 @@ A continuous variable is a numeric variable that can take **any value within a r
 - Described by continuous distributions: Normal (Gaussian), Log-normal, Exponential, Gamma, Uniform, Beta
 - Plotted with histograms, density plots (KDE) and box plots
 
-Related: [[Discrete Variable]] · [[Categorical columns]] · [[feature engineering]]
+Related: [[Discrete Variable]] · [[Categorical columns]] · [[Feature Engineering]]
 
 Examples in ML
 

@@ -1,0 +1,5 @@
+$$
+\sigma
+$$
+
+[[Standard deviation]]

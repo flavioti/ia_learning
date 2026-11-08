@@ -1,3 +1,3 @@
 #messaging 
 
-[[Queue]]
+[[software architecture/messaging systems/Queue]]

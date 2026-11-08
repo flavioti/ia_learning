@@ -2,11 +2,20 @@
 aliases:
   - High variance
 ---
+#diagnosis
 # Overfitting
+## Overfitting - TLDR
 
-## O que é?
+>[!info] Modelo decora os dados de treino em vez de aprender padrões generalizáveis. [[High variance]], Too complex, Many variables
 
- **Overfitting:** Modelo **decora os dados de treino** em vez de aprender padrões generalizáveis. O modelo é bom nos **dados que viu**, mas ruim em **dados novos**. ***High variance***, ***Too complex***, ***Many variables***
+---
+## Causas
+ [[High variance]], Too complex, Many variables
+## Fix
+ Simplify model, redo feature selection
+ 
+--- 
+ 
 ## Visualização
 
 ```
@@ -74,3 +83,9 @@ Epoch 5: Train Loss = 0.1, Test Loss = 0.8  ← Problema!
 | **Causa**    | Modelo muito complexo, poucos dados       |
 | **Risco**    | Falha total em dados novos                |
 | **Solução**  | Regularização, mais dados, modelo simples |
+
+
+## See also
+
+- [[Learning Curve - Linear regression]]: how to tell high bias from high variance, and whether more data would help
+

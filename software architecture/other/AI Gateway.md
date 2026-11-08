@@ -15,6 +15,3 @@
 	- Modelo não é fronteira de segurança, para operações financeira por exemplo, o processo deve ser deterministico
 - Cache
 	- Same prompt and model, same result
-
-
-![[Pasted image 20260921201137.png]]

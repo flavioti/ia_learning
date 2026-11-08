@@ -1,6 +1,6 @@
 #Model-optimization
 
-Is a collection of techiniques to [[Supervised Fine-Tuning (SFT)]] a LLM model, adjusting the ==weights== to a specific domain.
+Is a collection of techiniques to [[Supervised Fine-Tuning]] a LLM model, adjusting the ==weights== to a specific domain.
 
 ```mermaid
 graph LR

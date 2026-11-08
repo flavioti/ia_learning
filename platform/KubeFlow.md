@@ -1,8 +1,8 @@
 #open-source #microservices #portability
 
-Platform designed to make running [[ML - Machine Learning]] workflows on [[kubernetes]] simple, portable, and scalable.
+Platform designed to make running [[Machine Learning]] workflows on [[kubernetes]] simple, portable, and scalable.
 
-A bridge between [[Data Science]] and [[DevOps Engineer]] (often called [[MLOps Engineer]]). Instead of managing servers, networks, and storage manually, Kubeflow lets you build, deploy, and manage your [[ML model]] using containers.
+A bridge between [[data science/README|Data Science]] and [[DevOps Engineer]] (often called [[MLOps Engineer]]). Instead of managing servers, networks, and storage manually, Kubeflow lets you build, deploy, and manage your [[ML model]] using containers.
 
 ## Core components
 

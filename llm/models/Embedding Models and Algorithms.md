@@ -52,7 +52,7 @@ Match words, not meaning. Good for keywords, bad for semantics.
 
 | Metric | pgvector operator | Notes |
 |--------|-------------------|-------|
-| [[cosine similarity\|Cosine]] | `<=>` | Most common for text embeddings |
+| [[Cosine similarity\|Cosine]] | `<=>` | Most common for text embeddings |
 | Euclidean (L2) | `<->` | Sensitive to vector magnitude |
 | Inner product | `<#>` (negative) | Equals cosine when vectors are normalized, fastest |
 

@@ -1,6 +1,13 @@
+---
+aliases:
+  - Leakage
+  - leakage
+---
 # Data Leakage
 
 **Data leakage** happens when information the model would not have at prediction time gets into training. The model looks great in evaluation but fails in production, because it learned from information that does not exist there.
+
+>[!tip] production data is too different from training data
 
 ---
 
@@ -60,7 +67,9 @@ model.fit(X_train, y_train)
 
 ## Related
 
-- [[feature engineering]]
+- [[Feature Engineering]]
 - [[train dataset and test dataset]]
 - [[Overfitting]]
 - [[Training-Serving Skew]]
+- [[Backtest]]
+- [[point-in-time]]

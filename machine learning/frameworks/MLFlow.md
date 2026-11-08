@@ -1,6 +1,6 @@
 #open-source 
 
-Manage end-to-end [[ML - Machine Learning]] lifecycle and [[GenAI]]
+Manage end-to-end [[Machine Learning]] lifecycle and [[GenAI]]
 
 - experiments tracking
 - metrics tracking

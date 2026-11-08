@@ -1,176 +1,218 @@
-# Model Drift
+Model drift = [[data drift]] + [[concept drift]]
 
-Model Drift =  [[data drift]] and [[context drift]]
+## What is it?
 
-## O que é?
+**Model drift** = loss of model performance in production because the world (the data, or the relationships between variables) changed after training. It is not a code bug: the model keeps running exactly the same, but what it learned stops being valid.
 
-**Model Drift** = perda de desempenho do modelo em produção porque o mundo (dados ou relações entre variáveis) mudou depois do treino. Não é bug de código: o modelo continua executando igual, mas o que ele aprendeu deixa de valer.
+Unlike conventional software, a model **ages** even when nothing is changed.
 
-Diferente de software convencional, o modelo **envelhece** mesmo sem nenhuma alteração.
+> **Drift ≠ degradation.** Drift is the *change* (in the data or in the concept); degradation is the *consequence* (a drop in the metric). Data drift can happen without any performance drop, so monitoring only the final metric is not enough.
 
-> **Drift ≠ degradação.** Drift é a *mudança* (nos dados ou no conceito); degradação é a *consequência* (queda de métrica). Pode haver data drift sem queda de desempenho, por isso monitorar só a métrica final é insuficiente.
+**Examples:**
+- 🏠 Real estate prices: model trained before a sharp price increase
+- 📱 Fraud: fraudsters change technique
+- 💰 Credit score: the economy changes and so do payment patterns
+- 📊 Sales forecast: market and competition evolve
 
-**Exemplos:**
-- 🏠 Preço de imóveis: modelo treinado antes de uma alta forte de preços
-- 📱 Fraude: fraudadores mudam de técnica
-- 💰 Score de crédito: a economia muda e os padrões de pagamento mudam
-- 📊 Previsão de vendas: mercado e concorrência evoluem
-## Como Detectar?
+---
 
-A detecção tem duas camadas. Os sinais **sem ground truth** são rápidos e funcionam como alerta; os sinais **com ground truth** são lentos e servem como confirmação (veja [[Monitorar accuracy em produção continuamente]]).
-### Camada 1: Sinais rápidos (sem [[machine learning/concepts/Ground Truth|Ground Truth]])
+## Types of drift
 
-| Sinal                          | O que observar                                         | Velocidade         |
-| ------------------------------ | ------------------------------------------------------ | ------------------ |
-| **Distribuição das features**  | KS-test (contínuas), qui-quadrado ou PSI (categóricas) | ⚡ Segundos/minutos |
-| **Distribuição das previsões** | Proporção de cada classe prevista mudou                | ⚡ Minutos          |
-| **Confiança do modelo**        | Probabilidade máxima média caiu                        | ⚡ Segundos         |
-| **Intervalo das features**     | Valores fora do min/max do treino                      | ⚡ Segundos         |
+Terms differ between sources. In terms of probabilities, with inputs $X$ and target $y$:
+
+| Type | What changes | Also called | Example |
+|---|---|---|---|
+| **Data drift** | $P(X)$: distribution of the inputs | Covariate shift | A new customer segment starts using the product |
+| **Target drift** | $P(y)$: distribution of the target or predicted classes | Label (prior) shift | The fraud rate rises |
+| **Concept drift** | $P(y \mid X)$: relationship between inputs and target | Context drift | Same transaction profile, but fraudsters now behave differently |
+
+Concept drift is the most dangerous: the inputs can look the same, so fast signals without labels may not catch it. Only ground truth confirms it.
+
+### How the change happens over time
+
+| Pattern | Description | Example |
+|---|---|---|
+| **Sudden** | Abrupt change | A new regulation, a pandemic, a pricing change |
+| **Gradual** | The old and the new pattern coexist for a while | A new competitor slowly takes share |
+| **Incremental** | Small continuous steps | Sensor wear |
+| **Recurring / seasonal** | The pattern comes back periodically | Holiday shopping |
+
+> **Seasonality is not necessarily drift.** If the pattern is expected and repeats (weekday vs weekend, holiday peak), include it in the training data or in the features, and compare against the same period, not against the previous week. Otherwise every season triggers a false alarm.
+
+---
+
+## How to detect it?
+
+Detection has two layers. Signals **without ground truth** are fast and work as an alert; signals **with ground truth** are slow and serve as confirmation (see [[Monitor Accuracy in Production Continuously]]). The reason for layer 1 is label delay: the true label may take days, weeks or months to arrive.
+
+### Layer 1: Fast signals (without [[machine learning/concepts/Ground Truth|Ground Truth]])
+
+| Signal | What to observe | Speed |
+|---|---|---|
+| **Feature distributions** | KS-test (continuous), chi-square (categorical), or [[Population Stability Index (PSI)]] (both, after binning continuous variables) | ⚡ Seconds/minutes |
+| **Prediction distribution** | The share of each predicted class changed | ⚡ Minutes |
+| **Model confidence** | Mean maximum probability dropped | ⚡ Seconds |
+| **Feature range** | Values outside the training min/max | ⚡ Seconds |
 
 ```python
 from scipy.stats import ks_2samp
 
-# Data drift em uma feature contínua
-estatistica, pvalue = ks_2samp(X_train["idade"], X_prod["idade"])
+# Data drift on a continuous feature
+statistic, pvalue = ks_2samp(X_train["age"], X_prod["age"])
 if pvalue < 0.05:
-    print("⚠️ Possível Data Drift em 'idade'")
+    print("⚠️ Possible data drift in 'age'")
 
-# Valores fora do intervalo visto no treino
-fora = (X_prod["preco"] < X_train["preco"].min()) | (X_prod["preco"] > X_train["preco"].max())
-if fora.mean() > 0.01:  # mais de 1% das linhas
-    print("⚠️ Feature 'preco' fora do intervalo de treino")
+# Values outside the range seen in training
+outside = (X_prod["price"] < X_train["price"].min()) | (X_prod["price"] > X_train["price"].max())
+if outside.mean() > 0.01:  # more than 1% of rows
+    print("⚠️ Feature 'price' outside the training range")
 ```
 
-**Cuidados com o KS-test:**
-- Com amostras muito grandes, o p-value fica minúsculo mesmo para diferenças irrelevantes. Combine com um tamanho de efeito (estatística KS) ou PSI.
-- Testando muitas features, alguns alarmes falsos são esperados. Ajuste o limiar (ex.: Bonferroni) ou priorize as features mais importantes.
+**KS-test caveats:**
+- With very large samples, the p-value becomes tiny even for irrelevant differences. Combine it with an effect size (the KS statistic) or with PSI.
+- When testing many features, some false alarms are expected. Adjust the threshold (e.g. Bonferroni) or prioritize the most important features.
 
-### Camada 2: Confirmação (com ground truth)
+### Layer 2: Confirmation (with ground truth)
 
-Só é possível quando o rótulo real aparece, o que pode levar dias ou semanas.
+Only possible once the true label shows up, which can take days or weeks.
 
-| Métrica                                                     | Observação                             |
-| ----------------------------------------------------------- | -------------------------------------- |
-| [[machine learning/quality/development/Accuracy\|Accuracy]] | Boa para classes balanceadas           |
-| [[Precision]] / [[Recall]] / [[F1-Score]]                   | Preferíveis com classes desbalanceadas |
-| [[ROC-AUC]]                                                 | Independe do threshold                 |
+| Metric | Note |
+|---|---|
+| [[machine learning/quality/development/Accuracy\|Accuracy]] | Good for balanced classes |
+| [[Precision]] / [[Recall]] / [[F1-Score]] | Preferable with imbalanced classes |
+| [[ROC-AUC]] | Threshold-independent |
 
 ```python
-baseline = 0.85  # accuracy medida no teste, no momento do deploy
+baseline = 0.85  # accuracy measured on the test set at deploy time
 
-acuracias = {"dia_1": 0.85, "dia_30": 0.82, "dia_60": 0.78, "dia_90": 0.71}
+accuracies = {"day_1": 0.85, "day_30": 0.82, "day_60": 0.78, "day_90": 0.71}
 
-if acuracias["dia_90"] < baseline * 0.95:  # queda relativa > 5%
-    print("❌ Degradação confirmada")
+if accuracies["day_90"] < baseline * 0.95:  # relative drop > 5%
+    print("❌ Degradation confirmed")
 ```
+
+### When labels take too long
+
+If the ground truth is very delayed or never arrives, performance can be *estimated* without labels. Open-source libraries such as Evidently, NannyML and Alibi Detect cover drift detection, and NannyML also estimates performance from the model's own confidence. Treat these estimates as an alert, not as proof.
 
 ---
 
-## Impacto
+## Impact
 
-Ilustrativo, os números variam por problema:
+Illustrative, the numbers vary by problem. The values below are the same ones used in the code example above:
 
-```
-Tempo        Accuracy
-  ├─ Dia 1:    85% ✅
-  ├─ Mês 1:    82% ✅
-  ├─ 3 Meses:  75% ⚠️ (drift começou)
-  ├─ 6 Meses:  65% ❌ (perto ou abaixo do baseline)
-  └─ 1 Ano:    55% ❌ (inutilizável)
+![Accuracy decay after deployment](model_drift_decay.png)
 
-ROI cai progressivamente.
-```
+The accuracy crosses the alert threshold (a relative drop greater than 5%) between day 30 and day 60. By day 90 the drop is already clear, and without action the model becomes less useful every month, which erodes the business value it was built for. The plot is generated by `model_drift_generator.py` (same folder).
 
 ---
 
-## Como Mitigar?
+## How to mitigate?
 
-### 1. Retraining periódico
-Retreinar com dados recentes e só promover o novo modelo se ele superar o atual em um teste atualizado.
+### 1. Periodic retraining
+Retrain on recent data and only promote the new model if it beats the current one on an up-to-date test set. Require a minimum margin or a significance test, so that noise does not trigger a promotion.
 
 ```python
-novo = treinar(X_recente, y_recente)
-if avaliar(novo, X_teste_recente, y_teste_recente) > avaliar(atual, X_teste_recente, y_teste_recente):
-    deploy(novo)
+MARGIN = 0.01  # minimum gain required to promote
+
+new_model = train(X_recent, y_recent)
+if evaluate(new_model, X_test_recent, y_test_recent) > evaluate(current, X_test_recent, y_test_recent) + MARGIN:
+    deploy(new_model)
 ```
 
-- ✅ Adapta o modelo ao novo padrão
-- ❌ Caro (coletar dados, retreinar, validar)
+(`train`, `evaluate` and `deploy` are placeholders for your own pipeline.)
+
+- ✅ Adapts the model to the new pattern
+- ❌ Expensive (collect data, retrain, validate)
 
 ### 2. Champion-Challenger
-Treinar um *challenger* em ciclo fixo (ex.: semanal) e compará-lo ao *champion* em produção. Detalhes em [[Monitorar accuracy em produção continuamente]].
+The compare-then-promote step above, formalized: the model in production (*champion*) is evaluated against one or more *challengers*, ideally on live traffic in shadow mode or on a split, and the challenger is promoted only if it surpasses the champion. See [[champion and challenger]]. Challengers are usually produced by the periodic retraining of mitigation 1.
 
-- ✅ Automático, adapta-se sozinho
-- ❌ Custo recorrente de retreino; precisa de um conjunto de avaliação confiável e recente
+- ✅ Safe promotion, and it makes the retraining decision objective
+- ❌ Needs a reliable, recent evaluation set and extra serving cost during the comparison
 
 ### 3. Online learning
-O modelo é atualizado incrementalmente com os dados que chegam.
+The model is updated incrementally with the data that arrives. It requires an estimator that supports incremental training.
 
 ```python
+# e.g. sklearn's SGDClassifier. Classifiers need the full class list on the first call.
+model.partial_fit(first_batch.X, first_batch.y, classes=[0, 1])
 for batch in streaming_data:
-    modelo.partial_fit(batch.X, batch.y)
+    model.partial_fit(batch.X, batch.y)
 ```
 
-- ✅ Adaptação rápida
-- ❌ Pode degradar com dados ruins ou rótulos atrasados; difícil de auditar
+- ✅ Fast adaptation
+- ❌ Can degrade with bad data or delayed labels; hard to audit
 
-### 4. Monitoramento contínuo com gatilho de retreino
-Alertar quando um sinal ultrapassa o limiar e disparar o retreino ([[Continuous Training - CT]]). Retreinar automaticamente a partir de um único sinal rápido é arriscado; prefira usar o sinal para investigar e a confirmação (ground truth) para decidir.
+### 4. Continuous monitoring with a retraining trigger
+Alert when a signal crosses a threshold and trigger retraining (continuous training, CT). Retraining automatically from a single fast signal is risky; prefer using the signal to investigate, and the confirmation (ground truth) to decide.
 
-### 5. Features estáveis
-Preferir variáveis que mudam devagar.
+### 5. Stable features
+Prefer variables that change slowly.
 
 ```
-❌ "preço do Bitcoin" (muda a toda hora)
-✅ "categoria do produto" (estável)
+❌ "Bitcoin price" (changes all the time)
+✅ "product category" (stable)
 ```
+
+Stability is a tie-breaker, not a goal: do not drop a strongly predictive feature just because it moves.
 
 ---
 
-## Quando Retreinar?
+## When to retrain?
 
-| Frequência | Use quando |
-|-----------|-----------|
-| **Diária** | Ambiente muito dinâmico (fraude, preço) |
-| **Semanal** | Mudança moderada (score de crédito) |
-| **Mensal** | Mudança lenta |
-| **Sob demanda** | Drift detectado e confirmado (melhor prática) |
+| Frequency | Use when |
+|---|---|
+| **Daily** | Very dynamic environment (fraud, pricing) |
+| **Weekly** | Moderate change (credit score) |
+| **Monthly** | Slow change |
+| **On demand** | Drift detected and confirmed |
+
+The right cadence depends on how fast the world changes, how long labels take to arrive, and how much a retraining costs. A fixed schedule is simple and predictable; on-demand retraining avoids waste but depends on good detection, so many teams combine both: a schedule as a floor, plus a confirmed alert as an override.
+
+---
+
+## LLM and embedding systems
+
+The same ideas apply to LLM applications, but the signals are different: the distribution of user prompts and of retrieved documents changes, embeddings drift away from the index, and a provider may update a hosted model version behind the same name. Monitor input topics, embedding distributions and evaluation scores on a fixed test set.
 
 ---
 
 ## Checklist
 
-- ✅ [[Monitorar accuracy em produção continuamente]]
-- ✅ Monitorar distribuição das features e das previsões
-- ✅ Monitorar confiança do modelo
-- ✅ Registrar previsões para cruzar depois com o ground truth
-- ✅ Alertar quando a métrica cair além do limiar (ex.: 5%)
-- ✅ Retreino automatizado com validação antes do deploy
-- ✅ Manter histórico de modelos para rollback
+- ✅ [[Monitor Accuracy in Production Continuously]]
+- ✅ Monitor feature and prediction distributions
+- ✅ Monitor model confidence
+- ✅ Log predictions to join with the ground truth later
+- ✅ Account for seasonality before alerting
+- ✅ Alert when the metric drops beyond the threshold (e.g. 5%)
+- ✅ Automated retraining with validation before deploy
+- ✅ Keep a model history for rollback
 
 ---
 
 ## Model Drift vs [[Overfitting]]
 
-| Aspecto | Model Drift | Overfitting |
-|--------|-------------|-------------|
-| **Quando ocorre** | Em produção, ao longo do tempo | Durante o treino |
-| **Causa** | O mundo mudou | O modelo memorizou o treino |
-| **Sinal** | Métrica em produção cai com o tempo | Train >> Test |
-| **Solução** | Monitorar e retreinar | Regularizar, simplificar |
+| Aspect | Model Drift | Overfitting |
+|---|---|---|
+| **When it happens** | In production, over time | During training |
+| **Cause** | The world changed | The model memorized the training data |
+| **Signal** | Production metric falls over time | Train >> Test |
+| **Solution** | Monitor and retrain | Regularize, simplify |
 
 ---
 
-## Resumo
+## Summary
 
-| Aspecto | Descrição |
-|--------|-----------|
-| **Problema** | Desempenho cai porque dados/conceito mudaram |
-| **Tipos** | Data Drift, Target Drift, Concept Drift |
-| **Detecção rápida** | Distribuição de features/previsões, confiança |
-| **Confirmação** | Accuracy, F1, Precision, Recall com ground truth |
-| **Mitigação** | Retraining, Champion-Challenger, online learning |
+| Aspect | Description |
+|---|---|
+| **Problem** | Performance drops because data or concept changed |
+| **Types** | Data drift, target drift, concept drift |
+| **Patterns** | Sudden, gradual, incremental, recurring |
+| **Fast detection** | Feature/prediction distributions, confidence, [[Population Stability Index (PSI)]] |
+| **Confirmation** | Accuracy, F1, Precision, Recall with ground truth |
+| **Mitigation** | Retraining, [[champion and challenger]], online learning |
 
-Modelos não são "set and forget": planeje monitoramento e retreino desde o deploy.
+Models are not "set and forget": plan monitoring and retraining from deployment.
 
-[[ML metrics]]
+[[Evaluation classification model metrics]]

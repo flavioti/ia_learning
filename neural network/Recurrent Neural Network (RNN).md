@@ -1,2 +1,2 @@
 #time-series
-Is subcategory of [[Deep Neural Network (DNNs)]]
+Is subcategory of [[DNN]]

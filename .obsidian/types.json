@@ -3,6 +3,12 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "date": "date"
+    "date": "date",
+    "last_update": "date",
+    "applied": "date",
+    "contract": "multitext",
+    "has todo": "checkbox",
+    "link": "multitext",
+    "status": "text"
   }
 }

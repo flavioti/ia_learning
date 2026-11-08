@@ -30,7 +30,8 @@ The largest category covering Large Language Models and modern AI development:
 - `parameter/` - LLM parameters (temperature, top-k, top-p, etc.)
 - `prompt engineering/` - Prompt design and optimization
 - `prompt evaluation/` - Evaluation frameworks for prompts
-- `serving engines/` - Inference servers (vLLM, TensorRT, etc.)
+- `platform & framework/` - LLM frameworks and tools (Hugging Face Transformers, LangChain, LlamaIndex, LangSmith). Start from its `README.md` index
+- `serving engines/` - Inference servers (vLLM, SGLang, TensorRT-LLM, llama.cpp)
 - `system design/` - End-to-end system architecture
 - `tokens/` - Tokenization and token-related concepts
 - `training and inference/` - Training methodology and deployment
@@ -91,12 +92,15 @@ Broader AI topics:
 - **`metrics/`** - KPI definitions and metrics
 - **`monitoring/`** - Observability (Prometheus, Grafana, etc.)
 - **`neural network/`** - Deep learning architectures
+- **`deep learning/`** - Deep learning frameworks and topics (PyTorch, TensorFlow / Keras, JAX)
 - **`framework/`** - Development frameworks
 - **`IDE/`** - IDE configurations and tools
 - **`Q&A/`** - General Q&A study materials
 
 ### Root Level Files
-Scattered concept files (mostly AI/LLM related) that are either:
+> **Best practice:** do not put new notes at the vault root. Always create them in the matching category folder. The root is kept only for `README.md`, `CLAUDE.md` and legacy notes that have not been moved yet.
+
+Legacy scattered concept files (mostly AI/LLM related) that are either:
 - Foundational concepts (ASGI.md, Race condition.md)
 - Parameters (top-p.md, top-k.md)
 - Specific patterns (Tool calling.md, LLMOps.md)
@@ -123,6 +127,22 @@ Files leverage Obsidian's wikilink syntax `[[Note Name]]` for:
 - Concept references (linking related topics)
 - Provider references (e.g., linking to OpenAI when discussing GPT)
 - Domain connections (e.g., linking ML concepts to AI practices)
+
+#### Link Hierarchy (macro → specific)
+
+Links between notes must follow a **hierarchy**, going from the broad subject down to the specific one, in a **single direction (descending)**. A parent note links to its children; a child does **not** link back to its parent. This keeps the Obsidian knowledge graph organized, like a tree, instead of a flat web of cross-references.
+
+Example chain:
+
+Data Architecture -> PubSub -> Apache Kafka -> Kafka cluster -> Kafka Brokers -> Kafka Topics -> Kafka Topic Partition -> Kafka Topic Partition Replica
+
+Rules:
+- **Start from the macro subject and go deeper.** The parent note lists its direct children (one level down) in a `## Links` section, as a bulleted list.
+- **Never link back up.** Do not add a link from a child to its parent (neither in `## Links` nor in the text). The parent is reached through the graph by the link that comes from it.
+- **Do not skip levels** (e.g., do not link Data Architecture straight to Kafka Topic Partition Replica); place the note in the chain where it belongs.
+- **Lateral references** (to related notes at the same level or in other branches, such as Kafka Connect and Kafka Consumer) are allowed, but they come after the hierarchical links, in a `## Related` section, or inline when the sentence needs them. They never replace the hierarchical links.
+- When creating a note, decide its parent first, then add the link from the parent's `## Links` section to the new note. If the parent does not exist yet, create it.
+- Use the full-path wikilink with an alias when writing a link in a note: `[[folder/Note.md|Note]]`. This also avoids ambiguity when two notes share the same name.
 
 ---
 
@@ -182,6 +202,9 @@ done
 5. **Interview tracking**: Use the status subdirectories for organizing interview materials
 6. **Provider-specific notes**: Keep AI provider and cloud provider materials separate for clarity
 7. **No Apple silicon platform notes**: Do not mention Apple silicon (MLX, `mps`, Metal, M-series) in install instructions, code examples, device selection or platform comparison tables. Cover Linux (CPU and NVIDIA CUDA) only, unless the user explicitly asks for it
+8. **No notes at the vault root**: Best practice is to never create notes (or generated images) at the vault root. Place each one in the most specific matching category folder, after searching for an existing note first. If no folder fits, ask or create a new, well-named category folder instead of using the root
+9. **One note per subject**: When a topic deserves detail, create additional notes as needed, dedicating each note to one specific subject (one concept, tool, framework or use case), instead of packing several subjects into a single note. Link them from the related notes and from the folder's `README.md` index, and search first to avoid duplicates
+10. **Link in a hierarchy**: Connect notes from the macro subject down to the specific one (parent → child only, no links back to the parent), following the "Link Hierarchy" rules in the Cross-Linking Pattern section, so the graph stays organized
 
 ---
 
@@ -204,10 +227,10 @@ done
 1. **Generate Python script** using `matplotlib`, `seaborn`, or similar
 2. **Install dependencies** in `.venv` if needed: `.venv/bin/pip install <package>`
 3. **Execute script** to create PNG: `.venv/bin/python3 script_name.py`
-4. **Save to vault root** or appropriate folder
+4. **Save next to the note that uses it**, in the matching category folder (not the vault root)
 5. **Embed in markdown**: `![Description](diagram.png)`
 
-**Example:** See `[[machine learning/quality/development/ROC-AUC.md]]` for a professional ROC Curve PNG
+**Example:** See `machine learning/quality/development/ROC-AUC.md` for a professional ROC Curve PNG
 
 ---
 

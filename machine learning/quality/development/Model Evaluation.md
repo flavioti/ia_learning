@@ -1,3 +1,10 @@
+---
+aliases:
+  - Model Validation
+  - Model validation
+---
+Measure the performance of your model, so you can test and compare alternatives.
+
 ![[Pasted image 20261016125847.png|648]]
 
 ## The Machine Learning Workflow

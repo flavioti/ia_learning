@@ -44,6 +44,6 @@ In training, a missing `age` is imputed with the median (for example, 35). In pr
 
 ## Related
 
-- [[feature engineering]]
+- [[Feature Engineering]]
 - [[Data Leakage]]
 - [[Population Stability Index (PSI)]]

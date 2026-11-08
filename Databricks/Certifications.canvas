@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"fae92eb8df0a0d1a","x":-840,"y":60,"width":560,"height":240,"type":"file","file":"Databricks/Certifications/Databricks Certified Data Engineer Associate.md"},
+		{"id":"e5fda961798c2c2a","x":-220,"y":60,"width":580,"height":240,"type":"file","file":"Databricks/Certifications/Databricks Certified Context Engineer Associate.md"},
+		{"id":"dfe3947a656c77f6","x":400,"y":60,"width":560,"height":240,"type":"file","file":"Databricks/Certifications/Databricks Certified Machine Learning Associate.md"},
+		{"id":"9cb916bb1842bf28","x":-1440,"y":60,"width":560,"height":240,"type":"file","file":"Databricks/Certifications/Databricks Certified Data Analyst Associate.md"},
+		{"id":"cfe91f015cc88dca","x":1000,"y":60,"width":620,"height":240,"type":"file","file":"Databricks/Certifications/Databricks Certified Generative AI Engineer Associate.md"},
+		{"id":"689ad2356eb3b346","x":1660,"y":60,"width":680,"height":240,"type":"file","file":"Databricks/Certifications/Databricks Certified Associate Developer for Apache Spark.md"},
+		{"id":"481ed026b7ff2ace","x":400,"y":400,"width":560,"height":280,"type":"file","file":"Databricks/Certifications/Databricks Certified Machine Learning Professional.md"},
+		{"id":"2ce3b96b4b869a9c","x":-840,"y":420,"width":560,"height":240,"type":"file","file":"Databricks/Certifications/Databricks Certified Data Engineer Professional.md"}
+	],
+	"edges":[
+		{"id":"1e5a817a233f8ce1","fromNode":"fae92eb8df0a0d1a","fromSide":"bottom","toNode":"2ce3b96b4b869a9c","toSide":"top"},
+		{"id":"4ae1cf877652612e","fromNode":"dfe3947a656c77f6","fromSide":"bottom","toNode":"481ed026b7ff2ace","toSide":"top"}
+	]
+}

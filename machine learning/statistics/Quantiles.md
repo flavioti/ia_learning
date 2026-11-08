@@ -51,7 +51,7 @@ A point forecast gives one number ("sales will be 130"). **Quantile forecasts** 
 
 The range between 0.1 and 0.9 is an **80% prediction interval**: the actual value is expected to fall inside it 80% of the time.
 
-[[Google TimesFM 3.0]] returns a point forecast plus 9 quantiles (0.1 to 0.9). A `quantiles.shape` of `(12, 9)` means 12 time steps by 9 quantiles. See [[time series forecasting]].
+Google TimesFM 3.0 returns a point forecast plus 9 quantiles (0.1 to 0.9). A `quantiles.shape` of `(12, 9)` means 12 time steps by 9 quantiles. See Time series forecasting.
 
 ## Quantile loss (pinball loss)
 
@@ -95,8 +95,4 @@ def pinball_loss(y_true, y_pred, q):
 | **Latency monitoring** | p50, p95, p99 response times (SRE) |
 | **Prediction intervals** | Report a range instead of a single number |
 
-## Related
-
-- [[time series forecasting]]
-- [[Google TimesFM 3.0]]
 - [[Covariate Support]]

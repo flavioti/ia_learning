@@ -1,2 +1,3 @@
 **Is the broader architectural paradigm and system-level orchestration** where multiple AI agents, data sources, and tools collaborate, reason, and adapt to achieve complex, long-term, end-to-end goals
 Is not the same as AI Agent.
+Broader architecture where AI agents are used within workflows and orchestrations to accomplish larger goals autonomously.

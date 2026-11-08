@@ -1,4 +1,4 @@
->[!tip] Data cleaning is a key part of [[Data Science]] and [[Model Evaluation]]
+>[!tip] Data cleaning is a key part of [[data science/README|Data Science]] and [[Model Evaluation]]
 
 ## Steps
 

@@ -64,7 +64,7 @@ sequenceDiagram
 - Build `thread_id` from user + conversation (`user_id:conversation_id`) and namespace long-term data by `user_id`.
 - **Do not replay the full history**: trim or summarize old messages (rolling summary) to control cost and latency.
 - Store **distilled facts**, not raw chat, in long-term memory.
-- Define a **retention policy (TTL)**, support "delete my data" requests (LGPD/GDPR) and avoid persisting PII or payment data.
+- Define a **retention policy (TTL)**, support "delete my data" requests (LGPD/GDPR) and avoid persisting PII or payment data (see [[Data Privacy (PII, LGPD, GDPR)]]).
 
 ## Links
 

@@ -1,0 +1,5 @@
+[[MAE - Mean Absolute Error]]
+[[Huber Loss]]
+[[MAPE - Mean Absolute Percentage Error]]
+[[MSE - Mean Squared Error]]
+[[RMSE - Root Mean Squared Error]]

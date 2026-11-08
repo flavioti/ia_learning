@@ -1,6 +1,6 @@
 [[Comparative evaluation]]
 [[Conciseness]]
-[[llm/prompt engineering/evaluation (subjective)/Correctness|Correctness]]
+[[Correctness|Correctness]]
 [[Efficiency]]
 [[Faithfulness]]
 [[Format adherence]]

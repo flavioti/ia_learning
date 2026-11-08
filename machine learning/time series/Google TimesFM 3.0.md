@@ -1,6 +1,6 @@
 #model #foundational
 
-Is a foundational model, open-source, developed by Google Research to [[time series forecasting]].
+Is a foundational model, open-source, developed by Google Research to [[Time series forecasting]].
 ## Features
 - [[Multivariate Forecasting]]
 - [[Covariate Support]]

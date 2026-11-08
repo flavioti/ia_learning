@@ -1,3 +1,3 @@
 [[AI Engineer]] 
-[[llm/concepts/Agentic AI]]
+[[llm/agentic ai/Agentic AI|Agentic AI]]
 
