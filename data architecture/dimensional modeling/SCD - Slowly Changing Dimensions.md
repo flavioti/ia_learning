@@ -19,7 +19,9 @@ Without a strategy, a change silently rewrites the past. If a customer moves fro
 | **2** | Add a new row per change                             | Full                                  | Most analytical dimensions (the default choice)             |
 | **3** | Add a column for the previous value                  | Last value only                       | A single known change, such as a reorganization             |
 | **4** | Move history to a separate history table             | Full, in another table                | Frequently changing attributes with a small "current" table |
+| **5** | Mini-dimension plus a Type 1 pointer to its current row | Full for banded attributes, plus current view | Large dimensions with volatile attributes |
 | **6** | Hybrid of types 1 + 2 + 3                            | Full, plus current value on every row | Reports needing both historical and current values          |
+| **7** | Type 2 dimension, durable key in the fact and a view of current rows | Full, with as-was and as-is views | Both views without repeating current columns |
 
 ### Type 1: overwrite
 
@@ -82,6 +84,17 @@ Tools often provide this out of the box: dbt **snapshots** implement type 2 (wit
 - **Join facts on the right version.** Either store the surrogate key in the fact at load time, or join on the business key and the event date falling inside `valid_from`/`valid_to`.
 - **Late-arriving changes** (a change that is discovered after newer facts were loaded) require reopening and re-splitting versions, so plan for backfills.
 - **Wide, denormalized models** such as [[OBT - One Big Table|OBT]] make SCDs hard: a changed value must be rewritten on many rows, or the history must be baked into the table at build time.
+
+## Links
+
+- [[data architecture/dimensional modeling/SCD/SCD Type 0 - Retain.md|SCD Type 0 - Retain]]
+- [[data architecture/dimensional modeling/SCD/SCD Type 1 - Overwrite.md|SCD Type 1 - Overwrite]]
+- [[data architecture/dimensional modeling/SCD/SCD Type 2 - Add New Row.md|SCD Type 2 - Add New Row]]
+- [[data architecture/dimensional modeling/SCD/SCD Type 3 - Add New Column.md|SCD Type 3 - Add New Column]]
+- [[data architecture/dimensional modeling/SCD/SCD Type 4 - History Table.md|SCD Type 4 - History Table]]
+- [[data architecture/dimensional modeling/SCD/SCD Type 5 - Mini-Dimension and Type 1 Outrigger.md|SCD Type 5 - Mini-Dimension and Type 1 Outrigger]]
+- [[data architecture/dimensional modeling/SCD/SCD Type 6 - Hybrid.md|SCD Type 6 - Hybrid]]
+- [[data architecture/dimensional modeling/SCD/SCD Type 7 - Dual Type 1 and 2.md|SCD Type 7 - Dual Type 1 and 2]]
 
 ## Related
 

@@ -1,3 +1,7 @@
+---
+tags:
+  - classic-ml
+---
 #regression-metric #metrics #regression #evaluation
 
 ## Definition
@@ -95,14 +99,3 @@ for p, r2 in [(3, 0.80), (10, 0.81)]:
 - **It is only a rough correction:** it penalizes the feature count but does not detect leakage or a badly specified model.
 - **Alternatives for model selection:** [[Akaike Information Criterion|AIC]], [[Bayesian Information Criterion|BIC]] and cross-validated error penalize complexity more rigorously.
 - **Do not confuse $p$ and $n$:** $p$ counts predictors only, not the intercept and not the samples.
-
-## Related
-
-- [[R-squared]]
-- [[Akaike Information Criterion]]
-- [[Bayesian Information Criterion]]
-- [[MSE - Mean Squared Error]]
-- [[RMSE - Root Mean Squared Error]]
-- [[MAE - Mean Absolute Error]]
-- [[Evaluating regression model metrics]]
-- [[Evaluation classification model metrics]]

@@ -51,7 +51,7 @@ scores = cross_val_score(model, X_train, y_train, cv=5, scoring="f1")
 print(scores.mean(), scores.std())      # about 0.74 +/- 0.03
 ```
 
-Accuracy is 94.5%, but the F1-Score on the rare class is only 0.70, which shows why [[Accuracy]] alone misleads on imbalanced data. See [[Evaluation classification model metrics]].
+Accuracy is 94.5%, but the F1-Score on the rare class is only 0.70, which shows why [[Accuracy]] alone misleads on imbalanced data. See [[Evaluating classification model metrics]].
 
 ## Metrics in `sklearn.metrics`
 

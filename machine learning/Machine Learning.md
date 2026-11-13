@@ -3,6 +3,8 @@ aliases:
   - machine learning
   - Machine Learning
   - ML
+tags:
+  - classic-ml
 ---
 ## Main paradigms
 

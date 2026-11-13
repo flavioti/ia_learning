@@ -168,7 +168,7 @@ Use the metric that matches the task:
 | Task | Metrics |
 |------|---------|
 | Regression | [[RMSE - Root Mean Squared Error]], [[MAE - Mean Absolute Error]], [[R-squared]]. See [[Evaluating regression model metrics]] |
-| Classification | [[F1-Score]], [[Precision]], [[Recall]], [[ROC-AUC]]. See [[Evaluation classification model metrics]] |
+| Classification | [[F1-Score]], [[Precision]], [[Recall]], [[ROC-AUC]]. See [[Evaluating classification model metrics]] |
 
 ## Pitfalls
 
@@ -211,4 +211,4 @@ Use the metric that matches the task:
 - [[Decision Tree Regressor]]
 - [[Decision Tree Classifier]]
 - [[Evaluating regression model metrics]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]

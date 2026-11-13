@@ -114,4 +114,4 @@ For the example above, WAPE = 14 / 460 ≈ 3.04% and sMAPE ≈ 3.03%. They are c
 - [[RMSE - Root Mean Squared Error]]
 - [[R-squared]]
 - [[Evaluating regression model metrics]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]

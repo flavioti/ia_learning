@@ -1,4 +1,8 @@
-#metrics #classification #evaluation #classification-metric
+---
+tags:
+  - classic-ml
+---
+#metrics #classification #evaluation #classification-metric 
 
 ## Overview
 
@@ -134,11 +138,11 @@ For ROC-AUC, scikit-learn uses `multi_class="ovr"` (one-vs-rest) or `"ovo"` (one
 
 ## Classification vs. regression metrics
 
-| | Classification | Regression |
-|---|---|---|
-| Target | A class | A number |
+|          | Classification                      | Regression                          |
+| -------- | ----------------------------------- | ----------------------------------- |
+| Target   | A class                             | A number                            |
 | Compares | Predicted class with the real class | Predicted value with the real value |
-| Metrics | This note | [[Evaluating regression model metrics]] |
+| Metrics  | This note                           | Evaluating regression model metrics |
 
 ## Related
 
@@ -150,4 +154,3 @@ For ROC-AUC, scikit-learn uses `multi_class="ovr"` (one-vs-rest) or `"ovo"` (one
 - [[ROC-AUC]]
 - [[PR-AUC]]
 - [[Model Evaluation]]
-- [[Evaluating regression model metrics]]

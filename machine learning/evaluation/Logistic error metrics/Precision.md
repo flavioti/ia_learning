@@ -1,3 +1,7 @@
+---
+tags:
+  - classic-ml
+---
 #metric #classification 
 
 **Precision** measures how many of the items a model predicted as positive are actually positive. It answers: *"When the model says positive, how often is it right?"*
@@ -73,4 +77,4 @@ precision_score(y_true, y_pred, average="macro")
 - [[Recall]]
 - [[F1-Score]]
 - [[Accuracy]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]

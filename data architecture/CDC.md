@@ -10,5 +10,5 @@ Change data capture
 [[Streamsets]]
 
 ## Sinc
-[[Apache Kafka Connect]]
+[[Connect]]
 

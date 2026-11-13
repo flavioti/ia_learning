@@ -1,3 +1,3 @@
 Output template guidance
 
-[[Prompt engineering]]
+[[Context engineering]]

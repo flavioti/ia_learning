@@ -1,18 +1,23 @@
+---
+tags:
+  - classic-ml
+---
 #supervised-learning #predictive 
 
 Labeled, so there is a target to predict.
 
-| Task                                    | Predicts                       | Example                                                 | Frameworks             |
-| --------------------------------------- | ------------------------------ | ------------------------------------------------------- | ---------------------- |
-| **Ranking / learning to rank**          | An ordering of items           | Search results, recommendations                         |                        |
-| **[[Time series forecasting]]**         | Future values of a sequence    | Sales next month (see [ARIMA](app://obsidian.md/ARIMA)) | [[Google TimesFM 3.0]] |
-| **Structured prediction**               | Sequences or structures        | Translation, named entity recognition                   |                        |
-| **Object detection / segmentation**     | Boxes or pixel masks in images | Self-driving, medical imaging                           |                        |
-| **Multi-label classification**          | Several labels at once         | Tags on an article                                      |                        |
-| **Survival analysis**                   | Time until an event            | Time until churn or failure                             |                        |
-| **Probabilistic / quantile regression** | A distribution or interval     | Forecast range                                          |                        |
-
+| Task                                    | Predicts                       | Example                                                 | Frameworks         |
+| --------------------------------------- | ------------------------------ | ------------------------------------------------------- | ------------------ |
+| **Ranking / learning to rank**          | An ordering of items           | Search results, recommendations                         |                    |
+| Time series forecasting                 | Future values of a sequence    | Sales next month (see [ARIMA](app://obsidian.md/ARIMA)) | Google TimesFM 3.0 |
+| **Structured prediction**               | Sequences or structures        | Translation, named entity recognition                   |                    |
+| **Object detection / segmentation**     | Boxes or pixel masks in images | Self-driving, medical imaging                           |                    |
+| **Multi-label classification**          | Several labels at once         | Tags on an article                                      |                    |
+| **Survival analysis**                   | Time until an event            | Time until churn or failure                             |                    |
+| **Probabilistic / quantile regression** | A distribution or interval     | Forecast range                                          |                    |
 ## Most used algorithms
+[[Logistic regression]]
+[[Linear Regression]]
 
 Regression predicts a number, classification predicts a class. Tree-based algorithms cover both tasks.
 
@@ -71,7 +76,3 @@ How to read it:
 - Logistic regression is, despite its name, a classifier: a linear model passed through a sigmoid.
 
 Details per algorithm in [[Machine Learning Algorithms|Machine Learning Algorithms]].
-
-## References
-
-[[Evaluation classification model metrics]]

@@ -2,6 +2,8 @@
 aliases:
   - MAE
   - Absolute Error
+tags:
+  - classic-ml
 ---
 #metrics #regression #forecasting #evaluation #regression-metric 
 ## Definition: 
@@ -106,9 +108,5 @@ MAE is minimized by predicting the **median**, which is the 0.5 quantile. The pi
 MAE is a standard metric for evaluating [[Time series forecasting]] models, including comparing [[Google TimesFM 3.0]] against a baseline such as a moving average or ARIMA.
 
 ## Related
-
-- [[Evaluation classification model metrics]]
-- [[MSE - Mean Squared Error]]
 - [[Huber Loss]]
 - [[Quantiles]]
-- [[Machine Learning]]

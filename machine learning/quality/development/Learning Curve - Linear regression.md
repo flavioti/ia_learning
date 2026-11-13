@@ -12,7 +12,7 @@ A **learning curve** plots a model's error on the **training data** and on **val
 
 >[!tip] Read it as two lines that move toward each other. The **gap** between them is the variance, and the **height** where they meet is the bias plus the noise.
 
-This note shows how it looks for [[Linear Regression (regression problems)|linear regression]]. For the same idea in classification see [[Logistic regression (Classification problems)]], and for the diagnosis in words see [[Underfitting]] and [[Overfitting]].
+This note shows how it looks for [[Linear Regression|linear regression]]. For the same idea in classification see [[Logistic regression]], and for the diagnosis in words see [[Underfitting]] and [[Overfitting]].
 
 ## How to build one
 
@@ -171,7 +171,7 @@ What the curves show:
 
 ## Related
 
-- [[Linear Regression (regression problems)|Linear Regression]]
+- [[Linear Regression|Linear Regression]]
 - [[Ridge and Lasso Regression]]
 - [[Underfitting]]
 - [[Overfitting]]

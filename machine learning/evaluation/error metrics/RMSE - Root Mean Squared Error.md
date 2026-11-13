@@ -1,6 +1,8 @@
 ---
 aliases:
   - RMSE
+tags:
+  - classic-ml
 ---
 #regression-metric 
 ## Definition

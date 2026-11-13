@@ -22,7 +22,7 @@ All derive from the [[Confusion Matrix]] (TP, FP, FN, TN).
 | Log loss ([[Crossentropy]]) | Penalizes confident wrong predictions | You need calibrated probabilities |
 
 - The **decision threshold** is a business choice, not a model property.
-- See also [[Imbalanced classes]] and [[Evaluation classification model metrics]].
+- See also [[Imbalanced classes]] and [[Evaluating classification model metrics]].
 
 ## 2. Regression metrics
 

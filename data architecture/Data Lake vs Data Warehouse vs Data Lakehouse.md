@@ -71,13 +71,13 @@ Common patterns:
 
 ## Machine learning view
 
-| Need | Warehouse | Lake | Lakehouse |
-|---|---|---|---|
-| Features and labels with history | Good with dated facts and slowly changing dimensions (SCD Type 2) | Possible if files are appended and never overwritten | Good: snapshots and full history |
-| [[point-in-time]] training sets and avoiding [[Data Leakage]] | Yes, with dated tables | Hard without table versions | Yes. Time travel reproduces a dataset, and a per-row point-in-time join builds it |
-| Unstructured data (text, images) | No | Yes | Yes |
-| Training at scale | Awkward | Good | Good |
-| [[Backtest]] and prediction vs outcome comparison | Good for structured data | Possible | Good |
+| Need                                                          | Warehouse                                              | Lake                                                 | Lakehouse                                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Features and labels with history                              | Good with dated facts and [[SCD Type 2 - Add New Row]] | Possible if files are appended and never overwritten | Good: snapshots and full history                                                  |
+| [[point-in-time]] training sets and avoiding [[Data Leakage]] | Yes, with dated tables                                 | Hard without table versions                          | Yes. Time travel reproduces a dataset, and a per-row point-in-time join builds it |
+| Unstructured data (text, images)                              | No                                                     | Yes                                                  | Yes                                                                               |
+| Training at scale                                             | Awkward                                                | Good                                                 | Good                                                                              |
+| [[Backtest]] and prediction vs outcome comparison             | Good for structured data                               | Possible                                             | Good                                                                              |
 
 ## Common mistakes
 

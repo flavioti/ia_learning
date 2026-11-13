@@ -205,8 +205,12 @@ Type 2 is the one that supports correct analysis of the past, and it is the same
 
 - Loading raw, unmodeled data and calling it a warehouse
 - No defined **grain** for the fact table, which causes wrong sums and double counting
-- Overwriting dimension history (SCD Type 1) when the past must be analyzed
+- Overwriting dimension history ([[SCD Type 1 - Overwrite]]) when the past must be analyzed
 - Several conflicting definitions of the same metric, with no semantic layer
 - Many data marts built by different teams with different logic
 - No [[data quality]] checks or [[Data Lineage]]
 - Copying the same data to a lake for ML and to a warehouse for BI, then keeping both in sync by hand
+
+## Links
+
+- [[data architecture/Data Warehouse/Google Dataform.md|Google Dataform]]

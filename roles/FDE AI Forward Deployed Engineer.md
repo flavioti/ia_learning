@@ -6,7 +6,7 @@ Popularized originally by [[person/Palantir]] and now heavily adopted by top AI 
 
 ## Core Skills
 - **Full-stack & cloud engineering**: Strong fondations in [[Python]] and [[Javascript]], APIs, [[SQL database]], and [[vector database]], [[cloud platforms]] ([[AWS cloud]], [[Azure cloud]]), and containerization ([[Docker]], [[kubernetes]]).
-- **AI & Agentic workflows**: Fluency in [[LLM]], [[APIs]], [[RAG]], [[Prompt engineering]], and orchestrating [[multi-step AI agents]].
+- **AI & Agentic workflows**: Fluency in [[LLM]], [[APIs]], [[RAG]], [[Context engineering]], and orchestrating [[multi-step AI agents]].
 - **Interpersonal & [[business/business acumen]]**: Exceptional communication to translate vague non-technical business requirements into actionable technical scopes, plus high agency to manage stakeholders under tight pressure.
 
 Similar to [[GTM AI Engineer]]

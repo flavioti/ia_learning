@@ -124,7 +124,7 @@ A target with thousands of classes (a user ID, a product SKU) is hard to learn. 
 
 ## Evaluation
 
-Classes are evaluated with the metrics derived from the [[Confusion Matrix]]. See [[Evaluation classification model metrics]]. For multiclass problems, per-class metrics are combined with a `macro`, `micro` or `weighted` average.
+Classes are evaluated with the metrics derived from the [[Confusion Matrix]]. See [[Evaluating classification model metrics]]. For multiclass problems, per-class metrics are combined with a `macro`, `micro` or `weighted` average.
 
 ---
 

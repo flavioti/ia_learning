@@ -1,6 +1,8 @@
 ## About
 
-Framework do Apache Kafka para **mover dados entre o Kafka e sistemas externos** (bancos, data lakes, filas, APIs) apenas com configuração, sem escrever código. Por baixo, ele usa [[Apache kafka Producer|producers]] e [[Apache Kafka Consumer|consumers]] do Kafka e cuida de offsets, retries, rebalance e paralelismo.
+Framework do Apache Kafka para **mover dados entre o Kafka e sistemas externos** (bancos, data lakes, filas, APIs) apenas com configuração, sem escrever código. Por baixo, ele usa [[Producer|producers]] e [[Consumer|consumers]] do Kafka e cuida de offsets, retries, rebalance e paralelismo.
+
+![[Connect.excalidraw|800]]
 
 ## Source e Sink
 
@@ -17,14 +19,14 @@ Postgres --(Debezium, source)--> Kafka --(S3 sink)--> Data Lake
 
 - **Sink connector:** cada task é um consumer, e todas as tasks formam um **consumer group** chamado `connect-<nome-do-connector>`.
   - O offset fica em `__consumer_offsets`, como em qualquer consumer group.
-  - As [[Kafka Topic Partition|partições]] são divididas entre as tasks. Se uma task sai, ocorre rebalance.
+  - As [[Partition|partições]] são divididas entre as tasks. Se uma task sai, ocorre rebalance.
 - **Source connector:** cada task é um producer. O "offset" aqui é a posição na origem (LSN do banco, ponto do arquivo), e não um offset de tópico. O Connect o guarda em um tópico interno (`connect-offsets`, por padrão).
 
 ## Componentes
 
 | Componente | O que é |
 | --- | --- |
-| **Worker** | Processo (JVM) que roda os connectors. Vários workers formam um cluster do Connect, **separado** do [[Kafka cluster]] |
+| **Worker** | Processo (JVM) que roda os connectors. Vários workers formam um cluster do Connect, **separado** do [[Cluster]] |
 | **Connector** | A configuração da integração (qual tabela, qual tópico, qual destino) |
 | **Task** | Unidade que de fato lê ou escreve. É a que se comporta como consumer ou producer. `tasks.max` define quantas existem |
 | **Converter** | Serializa e desserializa as mensagens (JSON, Avro, Protobuf) entre o Connect e o Kafka |
@@ -73,16 +75,21 @@ Use o Connect para **mover dados** entre sistemas, e um consumer próprio para *
 
 ## Pontos de atenção
 
-- **CDC e deletes:** o Debezium emite um evento de `delete` e depois um **tombstone** (valor `null`) para a mesma chave. Em tópicos compactados isso remove a chave. Veja [[Kafka Topics]].
+- **CDC e deletes:** o Debezium emite um evento de `delete` e depois um **tombstone** (valor `null`) para a mesma chave. Em tópicos compactados isso remove a chave. Veja [[Topics]].
 - **Falhas de conversão:** por padrão, uma mensagem inválida para o converter derruba a task. Configure `errors.tolerance` e a dead letter queue para decidir o que fazer.
 - **Semântica de entrega:** sinks costumam ser *at-least-once*. Para evitar duplicatas, o destino deve ser idempotente (upsert por chave, por exemplo).
 - **Recursos:** os workers consomem CPU e memória próprias, fora dos brokers. Dimensione o cluster do Connect separadamente.
 
+## Links
+
+- [[data architecture/Apache Kafka/Debezium.md|Debezium]]
+- [[data architecture/Apache Kafka/Connect Distributed Mode.md|Connect Distributed Mode]]
+
 ## Related
 
-- [[data architecture/Apache Kafka/Apache Kafka Consumer.md|Apache Kafka Consumer]]
-- [[data architecture/Apache Kafka/Apache kafka Producer.md|Apache Kafka Producer]]
-- [[data architecture/Apache Kafka/Kafka Topics.md|Kafka Topics]]
-- [[data architecture/Apache Kafka/Kafka Topic Partition.md|Kafka Topic Partition]]
-- [[data architecture/Apache Kafka/Kafka cluster.md|Kafka cluster]]
+- [[Consumer|Kafka Consumer]]
+- [[Producer|Apache Kafka Producer]]
+- [[Topics|Topics]]
+- [[Partition|Topic Partition]]
+- [[Cluster|Cluster]]
 - [[data architecture/CDC.md|CDC]]

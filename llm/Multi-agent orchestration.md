@@ -4,5 +4,5 @@ Distributes [[Reasoning]] across specialized agents (e.g., a _Planner_ agent, a 
 
 ### References
 [[llm/agentic ai/Agentic AI|Agentic AI]]
-[[Prompt engineering]]
+[[Context engineering]]
 [[LangGraph SDK]]

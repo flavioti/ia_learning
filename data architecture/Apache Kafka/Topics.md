@@ -22,4 +22,4 @@ Named log of records, split into partitions for parallelism
 
 ## Links
 
-- [[data architecture/Apache Kafka/Kafka Topic Partition.md|Kafka Topic Partition]]
+- [[Partition|Topic Partition]]

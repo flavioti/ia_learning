@@ -1,6 +1,11 @@
+---
+tags:
+  - classic-ml
+---
 #unsupervised-learning 
 
-No labels, so the model finds structure
+- Algorithm is trained without labels.
+- Identify the pattern and relations automatically
 
 |Task|Goal|Example|
 |---|---|---|
@@ -9,5 +14,3 @@ No labels, so the model finds structure
 |**Anomaly detection**|Find rare or unusual points|Fraud, equipment failure|
 |**Association rules**|Find items that occur together|Market basket analysis|
 |**Density estimation**|Model the data distribution|Generative modeling|
-
-[[Machine Learning]]

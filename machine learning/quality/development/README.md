@@ -27,7 +27,7 @@ Which one to pick:
 - Imbalanced classes, need a single number: [[F1-Score]]
 - Compare models independent of a threshold: [[ROC-AUC]]; with severe imbalance prefer [[PR-AUC]]
 
-More in [[Evaluation classification model metrics]] and [[Evaluating regression model metrics]].
+More in [[Evaluating classification model metrics]] and [[Evaluating regression model metrics]].
 
 ## Model validation and fit
 
@@ -60,7 +60,7 @@ More in [[Evaluation classification model metrics]] and [[Evaluating regression 
 ## Related
 
 - [[evaluation]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]
 - [[Evaluating regression model metrics]]
 - Production quality: [[Model drift]], [[concept drift]], [[model performance monitoring]], [[champion and challenger]]
 - [[Machine Learning|Machine Learning]]

@@ -54,12 +54,12 @@ erDiagram
 
 ### Modelagem dimensional
 
-| Formato | Ideia principal | Quando usar |
-|---|---|---|
-| [[Star schema]] | Uma tabela de fatos central ligada a dimensões desnormalizadas. | Camada de consumo (BI) com consultas simples e rápidas. |
-| [[Snowflake schema]] | É um star schema com as dimensões normalizadas em sub-tabelas (ex.: `DIM_PRODUCT` → `DIM_CATEGORY`, `DIM_BRAND`). | Menos redundância e armazenamento, ao custo de mais `JOIN`s. |
-| **Galaxy Schema** (Fact Constellation) | Várias tabelas de fatos compartilham dimensões (ex.: `FACT_SALES` e `FACT_INVENTORY` usando `DIM_PRODUCT` e `DIM_DATE`). | Data warehouses com vários processos de negócio. |
-| **Starflake** | Mistura os dois: algumas dimensões normalizadas, outras não. | Quando só algumas dimensões ganham com a normalização. |
+| Formato                                | Ideia principal                                                                                                          | Quando usar                                                  |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| [[Star schema]]                        | Uma tabela de fatos central ligada a dimensões desnormalizadas.                                                          | Camada de consumo (BI) com consultas simples e rápidas.      |
+| [[Snowflake schema]]                   | É um star schema com as dimensões normalizadas em sub-tabelas (ex.: `DIM_PRODUCT` → `DIM_CATEGORY`, `DIM_BRAND`).        | Menos redundância e armazenamento, ao custo de mais `JOIN`s. |
+| [[data architecture/dimensional modeling/Galaxy schema.md\|Galaxy Schema]] (Fact Constellation) | Várias tabelas de fatos compartilham dimensões (ex.: `FACT_SALES` e `FACT_INVENTORY` usando `DIM_PRODUCT` e `DIM_DATE`). | Data warehouses com vários processos de negócio.             |
+| **Starflake**                          | Mistura os dois: algumas dimensões normalizadas, outras não.                                                             | Quando só algumas dimensões ganham com a normalização.       |
 
 ### Outras abordagens
 

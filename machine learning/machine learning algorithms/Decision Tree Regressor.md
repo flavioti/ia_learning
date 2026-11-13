@@ -61,7 +61,7 @@ The weighted MSE falls from 100.7 to 0.67, a huge reduction, so this is an excel
 
 | Limitation | What happens | What to do |
 |------------|--------------|------------|
-| **Staircase predictions** | A smooth relationship is approximated by steps, and needs many leaves | Use [[Linear Regression (regression problems)\|Linear regression]], a GAM, or boosting |
+| **Staircase predictions** | A smooth relationship is approximated by steps, and needs many leaves | Use [[Linear Regression\|Linear regression]], a GAM, or boosting |
 | **No extrapolation** | Outside the training range, the prediction stays at the value of the nearest leaf | Use a linear model or add a trend component |
 | **Sensitive to target outliers** | The leaf mean is pulled by extreme targets | `criterion="absolute_error"`, or winsorize the target |
 | **Skewed target** | Large values dominate the MSE | Predict `log1p(y)` and transform back |
@@ -137,7 +137,7 @@ Always evaluate on **held-out data** (or with cross-validation), since training 
 | [[MAPE - Mean Absolute Percentage Error]] | Percentage error, when the target is always far from 0 |
 | [[R-squared]] | Share of variance explained, a quick gut check |
 
-See [[Evaluating regression model metrics]] for the full comparison, and [[Linear Regression (regression problems)]] for the problem type.
+See [[Evaluating regression model metrics]] for the full comparison, and [[Linear Regression]] for the problem type.
 
 ## Use cases
 
@@ -169,6 +169,6 @@ See [[Evaluating regression model metrics]] for the full comparison, and [[Linea
 - [[Decision Tree Classifier]]
 - [[Random Forest]]
 - [[Gradient Boosting]]
-- [[Linear Regression (regression problems)|Linear regression]]
+- [[Linear Regression|Linear regression]]
 - [[Continuous Variable]]
 - [[Evaluating regression model metrics]]

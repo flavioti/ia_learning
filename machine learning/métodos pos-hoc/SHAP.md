@@ -53,7 +53,7 @@ Shapley values are the only attribution method that satisfies all of these:
 | Explainer | For | Notes |
 |---|---|---|
 | `TreeExplainer` | Tree models: [[XGBoost]], LightGBM, CatBoost, [[Random Forest]], scikit-learn trees and [[Gradient Boosting]] | **Fast and exact** for trees. The usual choice |
-| `LinearExplainer` | Linear and logistic models ([[Logistic regression (Classification problems)]]) | Exact. For independent features the value is the coefficient times the feature's distance from its mean |
+| `LinearExplainer` | Linear and logistic models ([[Logistic regression]]) | Exact. For independent features the value is the coefficient times the feature's distance from its mean |
 | `DeepExplainer`, `GradientExplainer` | Neural networks | Faster approximations that use the network's gradients |
 | `KernelExplainer` | **Any** model, treated as a black box | Model-agnostic but **slow**, because it samples many perturbed inputs. Use on a small sample |
 | `PermutationExplainer`, `ExactExplainer` | Any model, small number of features | Sampling-based or exact |
@@ -190,7 +190,7 @@ Higher income raises the predicted price, and the effect is stronger at the high
 - [[XGBoost]]
 - [[Gradient Boosting]]
 - [[Random Forest]]
-- [[Logistic regression (Classification problems)]]
+- [[Logistic regression]]
 - [[House price]]
 - [[Credit approval]]
 - [[Churn]]

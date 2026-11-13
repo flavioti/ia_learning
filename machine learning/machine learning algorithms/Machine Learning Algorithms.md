@@ -8,11 +8,11 @@ Index of the algorithms covered in the vault, grouped by family. Each algorithm 
 
 ## Linear models
 
-| Algorithm | Task | Notes | Used in |
-|---|---|---|---|
-| [[Linear Regression (regression problems)\|Linear regression]] | Regression | The simplest baseline: a weighted sum of the features | [[House price]] |
-| [[Ridge and Lasso Regression]] | Regression | Linear regression with a penalty on the coefficients. Ridge (`Ridge`), Lasso (`Lasso`), Elastic Net (`ElasticNet`) | [[House price]], [[Used-car price]] |
-| [[Logistic regression (Classification problems)\|Logistic regression]] | Classification | Predicts a probability. Explainable, well calibrated and a strong baseline | [[Credit approval]], [[Credit Risk]], [[Churn]] |
+| Algorithm                                                              | Task           | Notes                                                                                                              | Used in                                         |
+| ---------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| [[Linear Regression\|Linear regression]]         | Regression     | The simplest baseline: a weighted sum of the features                                                              | [[House price]]                                 |
+| [[Ridge and Lasso Regression]]                                         | Regression     | Linear regression with a penalty on the coefficients. Ridge (`Ridge`), Lasso (`Lasso`), Elastic Net (`ElasticNet`) | [[House price]], [[Used-car price]]             |
+| [[Logistic regression\|Logistic regression]] | Classification | Predicts a probability. Explainable, well calibrated and a strong baseline                                         | [[Credit approval]], [[Credit Risk]], [[Churn]] |
 
 ## Tree-based models
 
@@ -45,7 +45,7 @@ Index of the algorithms covered in the vault, grouped by family. Each algorithm 
 | Situation | Start with | Then try |
 |---|---|---|
 | Regression on tabular data | Linear regression or Ridge (on the log of a skewed target) as the baseline | [[Random Forest Regressor]], then [[Gradient Boosting]] or [[XGBoost]] |
-| Classification on tabular data | [[Logistic regression (Classification problems)\|Logistic regression]] as the baseline | [[Gradient Boosting]] as the challenger |
+| Classification on tabular data | [[Logistic regression\|Logistic regression]] as the baseline | [[Gradient Boosting]] as the challenger |
 | The model must be explained to customers or regulators | Logistic regression or a small [[Decision Tree]] | Boosting, explained with [[SHAP]] |
 | Few rows or noisy data | A regularized linear model ([[Ridge and Lasso Regression]]) | A shallow tree model |
 | Strong interactions and non-linear effects | [[Gradient Boosting]] or [[XGBoost]] | Tune with early stopping |

@@ -54,7 +54,7 @@ If the model had given only 0.1 to the correct class, the loss would be $-\ln 0.
 
 - **Logits vs probabilities:** PyTorch's `CrossEntropyLoss` expects **raw logits** and applies log-softmax internally. Applying softmax before it is a common mistake. See [[machine learning/frameworks/PyTorch|PyTorch]].
 - **Numerical stability:** frameworks clip probabilities or use log-softmax to avoid $\log(0)$.
-- **Evaluation:** as a metric it is usually called **log loss**. It evaluates the quality of the predicted probabilities, not only the final class. See [[machine learning/evaluation/Evaluation classification model metrics|Evaluation classification model metrics]].
+- **Evaluation:** as a metric it is usually called **log loss**. It evaluates the quality of the predicted probabilities, not only the final class. See [[Evaluating classification model metrics|Evaluating classification model metrics]].
 
 ## Related
 

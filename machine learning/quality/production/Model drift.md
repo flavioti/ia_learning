@@ -215,4 +215,4 @@ The same ideas apply to LLM applications, but the signals are different: the dis
 
 Models are not "set and forget": plan monitoring and retraining from deployment.
 
-[[Evaluation classification model metrics]]
+[[Evaluating classification model metrics]]

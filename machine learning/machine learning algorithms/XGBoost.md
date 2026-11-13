@@ -186,7 +186,7 @@ In practice the accuracy of the four is usually close, and the quality of the fe
 - [[Gradient Boosting]]
 - [[Random Forest]]
 - [[Decision Tree]]
-- [[Logistic regression (Classification problems)]]
+- [[Logistic regression]]
 - [[SHAP]]
 - [[scikit-learn]]
 - [[MLFlow]]

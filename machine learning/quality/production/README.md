@@ -44,6 +44,6 @@ Model drift = [[data drift]] + [[concept drift]]
 - [[machine learning/quality/development/README|Development quality]]: metrics and validation before deployment
 - [[Overfitting]]: a training-time problem, not to be confused with drift
 - [[machine learning/concepts/Ground Truth|Ground Truth]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]
 - [[evaluation]]
 - [[Machine Learning|Machine Learning]]

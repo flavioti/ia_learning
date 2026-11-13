@@ -11,7 +11,7 @@ A **classification tree** is a [[Decision Tree]] that predicts a **class label**
 
 >[!tip] Think of it as a flowchart of yes/no questions that ends in a class.
 
-Shared concepts (anatomy, greedy splitting, pruning, feature importance, strengths and weaknesses) are in [[Decision Tree]]. This note covers what is specific to classification. See also the [[classification model]] note and the problem type [[Logistic regression (Classification problems)]].
+Shared concepts (anatomy, greedy splitting, pruning, feature importance, strengths and weaknesses) are in [[Decision Tree]]. This note covers what is specific to classification. See also the [[classification model]] note and the problem type [[Logistic regression]].
 
 ## Leaf prediction
 
@@ -168,7 +168,7 @@ Evaluate on **held-out data**, and watch the gap between the training and test s
 | [[ROC-AUC]] and [[PR-AUC]] | Ranking quality, from `predict_proba` |
 | [[Confusion Matrix]] | The full breakdown of errors |
 
-See [[Evaluation classification model metrics]] for the full comparison.
+See [[Evaluating classification model metrics]] for the full comparison.
 
 ## Use cases
 
@@ -201,6 +201,6 @@ See [[Evaluation classification model metrics]] for the full comparison.
 - [[Random Forest]]
 - [[Gradient Boosting]]
 - [[classification model]]
-- [[Logistic regression (Classification problems)]]
-- [[Evaluation classification model metrics]]
+- [[Logistic regression]]
+- [[Evaluating classification model metrics]]
 - [[Categorical columns]]

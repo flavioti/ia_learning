@@ -1,5 +1,5 @@
 #Model-optimization
-[[Prompt engineering]]
+[[Context engineering]]
 
 Is a prompt engineering techinique, to force the model divide a complex problem in intermediary steps, before emit the final answer.
 

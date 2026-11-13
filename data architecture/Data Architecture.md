@@ -1,3 +1,6 @@
+---
+description: "Index of the data architecture notes: storage options, databases, ingestion, streaming and processing, machine learning data, quality and governance."
+---
 # Data architecture
 
 Index of the notes about how data is stored, moved, processed, served and governed. Each subject has its own note, and many folders have their own README.
@@ -33,6 +36,7 @@ flowchart LR
 - [[data architecture/Data Lake/README.md|Data Lake]]
 - [[data architecture/Data Lakehouse/Data Lakehouse.md|Data Lakehouse]]
 - [[data architecture/Data Lake vs Data Warehouse vs Data Lakehouse.md|Data Lake vs Data Warehouse vs Data Lakehouse]]
+- [[data architecture/file formats/README.md|File formats]]
 
 ### Databases
 
@@ -48,10 +52,12 @@ flowchart LR
 | Area | Notes |
 |---|---|
 | Messaging and streaming | [[data architecture/concepts/PubSub.md\|PubSub]] |
-| Batch processing | [[data architecture/Apache Spark/Apache Spark.md\|Apache Spark]], [[data architecture/Pandas.md\|Pandas]] |
+| Batch processing | [[data architecture/Apache Hadoop/Apache Hadoop.md\|Apache Hadoop]], [[data architecture/Apache Spark/Apache Spark.md\|Apache Spark]], [[data architecture/Pandas.md\|Pandas]] |
+| Distributed processing concepts | [[data architecture/concepts/Data Skew.md\|Data Skew]] |
 | Query engines | [[data architecture/Trino/Apache Trino.md\|Apache Trino]] |
 | Orchestration | [[data architecture/Apache Airflow.md\|Apache Airflow]] |
-| Change and reprocessing | [[data architecture/CDC.md\|CDC]], [[data architecture/data engineering/backfill.md\|backfill]] |
+| Data integration | [[data architecture/data engineering/Data Integration Platform.md\|Data Integration Platform]] |
+| Change and reprocessing | [[data architecture/CDC.md\|CDC]], [[data architecture/data engineering/backfill.md\|backfill]], [[data architecture/data engineering/Schema Evolution.md\|Schema Evolution]] |
 
 ### Machine learning data
 

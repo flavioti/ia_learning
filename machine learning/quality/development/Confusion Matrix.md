@@ -1,3 +1,7 @@
+---
+tags:
+  - classic-ml
+---
 #metric #classification 
 
 A **confusion matrix** compares the model's predictions against the ground truth. It is the fundamental summary for binary and multiclass classification, and nearly every classification metric is derived from its four cells.
@@ -95,5 +99,5 @@ print(cm)
 - [[Recall]]
 - [[F1-Score]]
 - [[ROC-AUC]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]
  

@@ -1,6 +1,8 @@
 ---
 aliases:
   - Coefficient of Determination
+tags:
+  - classic-ml
 ---
 #regression-metric #metrics #regression #evaluation
 
@@ -102,4 +104,4 @@ print(r2_score(actual, forecast))   # 0.892
 - [[RMSE - Root Mean Squared Error]]
 - [[MAE - Mean Absolute Error]]
 - [[Evaluating regression model metrics]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]

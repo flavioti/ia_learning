@@ -1,7 +1,7 @@
 #regression #regularization #supervised-learning
 # Ridge and Lasso Regression
 
-**Ridge** and **Lasso** are [[Linear Regression (regression problems)|linear regression]] with a **penalty on the size of the coefficients**. This technique is called **regularization**. It makes the model simpler, so it **overfits less** on new data. See [[Overfitting]].
+**Ridge** and **Lasso** are [[Linear Regression|linear regression]] with a **penalty on the size of the coefficients**. This technique is called **regularization**. It makes the model simpler, so it **overfits less** on new data. See [[Overfitting]].
 
 | | Ridge | Lasso | Elastic Net |
 |---|---|---|---|
@@ -122,7 +122,7 @@ The coefficients keep shrinking as $\alpha$ grows. A little regularization (arou
 
 ## Related
 
-- [[Linear Regression (regression problems)]]
+- [[Linear Regression]]
 - [[Overfitting]]
 - [[Underfitting]]
 - [[K-Fold Cross-Validation]]

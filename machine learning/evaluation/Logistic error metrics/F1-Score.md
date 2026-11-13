@@ -1,6 +1,7 @@
 ---
 aliases:
   - F-beta
+  - classic-ml
 ---
 #metric #classification 
 
@@ -77,4 +78,4 @@ f1_score(y_true, y_pred, average="macro")
 - [[Recall]]
 - [[Accuracy]]
 - [[ROC-AUC]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]

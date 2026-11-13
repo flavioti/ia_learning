@@ -28,6 +28,8 @@ Engines that run a trained model efficiently. They live in `llm/serving engines/
 | [[LangGraph SDK]] | Stateful, graph-based agent workflows |
 | [[LangFlow]] | Visual builder for LLM flows |
 | [[LlamaIndex]] | Document parsing and retrieval for RAG and agent workflows |
+| [[platform/N8N.md\|n8n]] | Visual workflow automation with AI agent nodes, to connect apps and APIs. Fair-code license and self-hostable |
+| [[llm/platform & framework/Google ADK.md\|Google ADK]] | Code-first framework to build, evaluate and deploy single and multi-agent systems, optimized for Gemini and Google Cloud |
 
 ## Observability and evaluation
 
@@ -46,7 +48,7 @@ Engines that run a trained model efficiently. They live in `llm/serving engines/
 
 - **Use an open model:** Hugging Face Transformers, fine-tuned with PEFT if needed.
 - **Serve it in production:** vLLM by default, TensorRT-LLM when the hardware is NVIDIA and performance is critical, llama.cpp on a laptop or CPU.
-- **Build an application or an agent:** LangChain and LangGraph, or LlamaIndex when documents and retrieval are the core.
+- **Build an application or an agent:** LangChain and LangGraph, or LlamaIndex when documents and retrieval are the core. On Google Cloud, Google ADK is the native option for agents.
 
 ## Related
 

@@ -1,3 +1,7 @@
+---
+tags:
+  - classic-ml
+---
 #metric #classification
 
 **Recall** (also called sensitivity or true positive rate) measures how many of the actual positive items the model found. It answers: *"Of everything that was really positive, how much did the model catch?"*
@@ -73,4 +77,4 @@ recall_score(y_true, y_pred, average="macro")
 - [[Precision]]
 - [[F1-Score]]
 - [[Accuracy]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]

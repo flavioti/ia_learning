@@ -222,4 +222,4 @@ else:
 | Reporte | Não | **Sempre** ✅ |
 | Regra | Train ≥ Test sempre | Sempre > 70% |
 
-[[Evaluation classification model metrics]]
+[[Evaluating classification model metrics]]

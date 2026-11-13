@@ -56,7 +56,7 @@ The **imbalance ratio** is majority count divided by minority count. A 95/5 spli
 | Lift or recall at top N% | How concentrated the positives are at the top of the ranking |
 | Calibration, Brier score | Whether a predicted 20% really means 20% (matters when the probability is used) |
 
-See [[Evaluation classification model metrics]].
+See [[Evaluating classification model metrics]].
 
 ## 2. Split with stratification
 
@@ -178,9 +178,9 @@ The cost-based threshold lowers the cost by about 25%, with no resampling at all
 
 - [[Churn]]
 - [[Credit approval]]
-- [[Logistic regression (Classification problems)]]
+- [[Logistic regression]]
 - [[Gradient Boosting]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]
 - [[Confusion Matrix]]
 - [[PR-AUC]]
 - [[ROC-AUC]]

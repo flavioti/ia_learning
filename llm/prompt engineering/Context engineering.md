@@ -1,3 +1,7 @@
+---
+aliases:
+  - Prompt engineering
+---
 #Model-optimization
 ## Terminology
 
@@ -14,4 +18,3 @@
 [[prompt]]
 [[best pratices]]
 [[LangSmith Prompt]]
-

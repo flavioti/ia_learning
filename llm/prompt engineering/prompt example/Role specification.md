@@ -6,4 +6,4 @@ Usually for ==🔵orchestration== | Main agent
 - Decision-Making principles
 - Communication standards
 
-[[Prompt engineering]]
+[[Context engineering]]

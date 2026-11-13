@@ -37,6 +37,6 @@ The tradeoff is the balancing act between the two, this is [[Parsimonious Model]
 ![[Evaluating regression model metrics]]
 
 ## References
-[[Linear Regression (regression problems)]]
-[[Logistic regression (Classification problems)]]
+[[Linear Regression]]
+[[Logistic regression]]
 

@@ -98,5 +98,5 @@ Neste limiar a acurácia seria de 94,9%, abaixo do baseline ingênuo de 99,5% (a
 
 - [[quality/development/README|Qualidade do modelo em desenvolvimento]]
 - [[Model Evaluation]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]
 - [[Mock Senior ML Interview]]

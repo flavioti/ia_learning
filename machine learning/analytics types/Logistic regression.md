@@ -1,10 +1,14 @@
 ---
 aliases:
-  - Logistic regression
   - LogisticRegression
+  - Classification-problems
+  - classic-ml
+tags:
+  - classic-ml
 ---
 #ml-model #supervised-learning #classification #linear-model
 
+[[Evaluating classification model metrics]]
 ## Logistic regression
 
 It predicts a probability for a ==🟠category== (e.g. spam / not spam, churn / no churn) by passing a linear combination of features through a sigmoid function, so the output falls between ==🟡0 and 1==.
@@ -13,8 +17,10 @@ Despite the name, it is a **classification** model, not a regression one. It is 
 
 >[!tip] Think of it as a linear regression whose output is squeezed into a probability. The straight line works on the **log-odds** scale, and the sigmoid converts it back to a probability.
 
-See also the general [[classification model]] note, the sibling [[Linear Regression (regression problems)]] and the paradigm [[Supervised Learning]].
-
+| Algorithm                                                              | Task           | Notes                                                                      | Used in                             |
+| ---------------------------------------------------------------------- | -------------- | -------------------------------------------------------------------------- | ----------------------------------- |
+| [[Logistic regression\|Logistic regression]] | Classification | Predicts a probability. Explainable, well calibrated and a strong baseline | Credit approval, Credit Risk, Churn |
+|                                                                        |                |                                                                            |                                     |
 ## How it works
 
 1. Compute a linear score from the features: $z = b_0 + b_1 x_1 + \dots + b_n x_n$
@@ -173,7 +179,7 @@ When one class is rare, accuracy is misleading. Use [[ROC-AUC]], [[PR-AUC]] and 
 
 ## Evaluation
 
-Accuracy, [[Precision]], [[Recall]], [[F1-Score]], [[ROC-AUC]] and the [[Confusion Matrix]], plus calibration and log loss when the probabilities are used. See [[Evaluation classification model metrics]].
+Accuracy, [[Precision]], [[Recall]], [[F1-Score]], [[ROC-AUC]] and the [[Confusion Matrix]], plus calibration and log loss when the probabilities are used. See [[Evaluating classification model metrics]].
 
 ## Used in
 
@@ -194,5 +200,4 @@ Accuracy, [[Precision]], [[Recall]], [[F1-Score]], [[ROC-AUC]] and the [[Confusi
 
 # Models
 [[Decision Tree Classifier|DecisionTreeClassifier]]
-
-[[Machine Learning]]
+[[Evaluating classification model metrics]]

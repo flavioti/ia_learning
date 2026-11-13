@@ -40,7 +40,7 @@ The residual is the **negative gradient of the loss** with respect to the curren
 | Binary classification | Log loss ([[Crossentropy]]) | $y - p$, where $p$ is the current predicted probability |
 | Ranking, Poisson, survival and others | The corresponding loss | Its gradient |
 
-Because only the **gradient** is needed, any differentiable loss can be used. For classification the sum of the trees is on the **log-odds** scale, and a sigmoid turns it into a probability (the same output scale as in [[Logistic regression (Classification problems)|logistic regression]]).
+Because only the **gradient** is needed, any differentiable loss can be used. For classification the sum of the trees is on the **log-odds** scale, and a sigmoid turns it into a probability (the same output scale as in [[Logistic regression|logistic regression]]).
 
 ## A small example by hand
 
@@ -209,7 +209,7 @@ Other tools fit better for raw images, audio and text (neural networks), for str
 - [[XGBoost]]
 - [[Decision Tree]]
 - [[Random Forest]]
-- [[Logistic regression (Classification problems)]]
+- [[Logistic regression]]
 - [[SHAP]]
 - [[Overfitting]]
 - [[scikit-learn]]

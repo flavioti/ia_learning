@@ -1,6 +1,9 @@
 ---
 aliases:
   - MSE
+  - Squared error function
+tags:
+  - classic-ml
 ---
 #outliers #regression-metric 
 ## Definition: 
@@ -14,5 +17,3 @@ Where $y_i$ is the actual value, $\hat{y}_i$ is the predicted value, and $n$ is 
 
 **Key Characteristics**: Heavily penalizes large errors; smooth gradients, easy to solve mathematically.
 **Best Used When**: Outliers are highly undesirable or represent critical errors you want to avoid at all costs.
-
-[[Machine Learning]]

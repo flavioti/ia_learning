@@ -2,8 +2,9 @@
 aliases:
   - controllers
   - Kafka controllers
+  - cluster controller
 ---
-Coordinate [[Kafka Brokers]]
+Coordinate [[Brokers]]
 ## Links
 
 - [[data architecture/Apache Kafka/KRaft.md|KRaft]]

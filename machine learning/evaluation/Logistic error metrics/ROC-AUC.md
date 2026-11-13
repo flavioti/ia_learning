@@ -1,3 +1,7 @@
+---
+tags:
+  - classic-ml
+---
 #binary-classification 
 # ROC-AUC
 
@@ -172,4 +176,4 @@ Pass probabilities or scores, not hard class labels: hard labels collapse the cu
 - [[F1-Score]]
 - [[Accuracy]]
 - [[PR-AUC]]
-- [[Evaluation classification model metrics]]
+- [[Evaluating classification model metrics]]

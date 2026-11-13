@@ -8,5 +8,5 @@
 
 ## Links
 
-[[Evaluation classification model metrics]]
+[[Evaluating classification model metrics]]
 [[Evaluating regression model metrics]]

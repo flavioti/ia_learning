@@ -155,10 +155,10 @@ Always evaluate on **held-out data** (or with cross-validation), since training 
 
 | Task                                              | Metrics                                                                                                           |
 | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [[Linear Regression (regression problems)]]       | [[RMSE - Root Mean Squared Error]], [[MAE - Mean Absolute Error]], [[R-squared]]                                  |
-| [[Logistic regression (Classification problems)]] | [[machine learning/quality/development/Accuracy\|Accuracy]], [[Precision]], [[Recall]], [[F1-Score]], [[ROC-AUC]] |
+| [[Linear Regression]]       | [[RMSE - Root Mean Squared Error]], [[MAE - Mean Absolute Error]], [[R-squared]]                                  |
+| [[Logistic regression]] | [[machine learning/quality/development/Accuracy\|Accuracy]], [[Precision]], [[Recall]], [[F1-Score]], [[ROC-AUC]] |
 
-Compare the training and test score. A big gap signals overfitting, so reduce `max_depth` or raise `min_samples_leaf`. More detail: [[Evaluating regression model metrics]] and [[Evaluation classification model metrics]].
+Compare the training and test score. A big gap signals overfitting, so reduce `max_depth` or raise `min_samples_leaf`. More detail: [[Evaluating regression model metrics]] and [[Evaluating classification model metrics]].
 
 ## Use cases
 
@@ -178,7 +178,7 @@ More use cases per task: [[Decision Tree Classifier]] and [[Decision Tree Regres
 
 | Model                                     | Compared with a single tree                                                                                                                              |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[Linear Regression (regression problems)\|Linear regression]]                     | Linear models extrapolate and are smooth, but need non-linear terms and interactions added by hand. Trees find them automatically but cannot extrapolate |
+| [[Linear Regression\|Linear regression]]                     | Linear models extrapolate and are smooth, but need non-linear terms and interactions added by hand. Trees find them automatically but cannot extrapolate |
 | [[Random Forest]]                         | Averages many trees trained on random subsets. Much lower variance and usually more accurate, but less interpretable                                     |
 | [[Gradient Boosting]] (XGBoost, LightGBM) | Builds trees sequentially, each correcting the previous errors. Often the best on tabular data, but needs more tuning                                    |
 | Neural networks                           | Better on images, text and audio. Trees usually win or tie on small to medium tabular data                                                               |
@@ -211,7 +211,7 @@ More use cases per task: [[Decision Tree Classifier]] and [[Decision Tree Regres
 - [[Random Forest]]
 - [[Gradient Boosting]]
 - [[Overfitting]]
-- [[Linear Regression (regression problems)|Linear regression]]
+- [[Linear Regression|Linear regression]]
 - [[Categorical columns]]
 - [[Feature Engineering]]
 - [[Data Leakage]]
