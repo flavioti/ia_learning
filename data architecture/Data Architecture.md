@@ -38,6 +38,10 @@ flowchart LR
 - [[data architecture/Data Lake vs Data Warehouse vs Data Lakehouse.md|Data Lake vs Data Warehouse vs Data Lakehouse]]
 - [[data architecture/file formats/README.md|File formats]]
 
+### Consumption
+
+- [[data architecture/Power BI.md|Power BI]]
+
 ### Databases
 
 | Type | Notes |

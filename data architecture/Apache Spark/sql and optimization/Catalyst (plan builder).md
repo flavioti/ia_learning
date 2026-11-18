@@ -24,12 +24,12 @@ flowchart LR
     P -->|4. Code generation<br/>whole-stage codegen| C[JVM bytecode<br/>runs as tasks]
 ```
 
-| Phase | What happens |
-|---|---|
-| **1. Analysis** | Resolves table names, column names and data types against the **catalog**. `SELECT amount FROM orders` becomes a plan where `orders` and `amount` are real, typed references. A missing column fails here, with an `AnalysisException` |
-| **2. Logical optimization** | Applies **rule-based** rewrites that do not depend on the cluster: predicate pushdown, column pruning, constant folding and others (see below) |
-| **3. Physical planning** | Generates one or more physical plans for the logical plan (for example, broadcast hash join or sort merge join), then picks one using a **cost model** |
-| **4. Code generation** | Compiles the chosen plan into JVM bytecode (**whole-stage code generation**, part of Tungsten), so a stage runs as tight loops instead of one function call per row |
+| Phase                       | What happens                                                                                                                                                                                                                           |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Analysis**             | Resolves table names, column names and data types against the **catalog**. `SELECT amount FROM orders` becomes a plan where `orders` and `amount` are real, typed references. A missing column fails here, with an `AnalysisException` |
+| **2. Logical optimization** | Applies **rule-based** rewrites that do not depend on the cluster: predicate pushdown, column pruning, constant folding and others (see below)                                                                                         |
+| **3. Physical planning**    | Generates one or more physical plans for the logical plan (for example, broadcast hash join or sort merge join), then picks one using a **cost model**                                                                                 |
+| **4. Code generation**      | Compiles the chosen plan into JVM bytecode (**whole-stage code generation**, part of Tungsten), so a stage runs as tight loops instead of one function call per row                                                                    |
 
 ## Trees and rules
 
@@ -43,16 +43,16 @@ Example: constant folding. The expression `amount * (1 + 1)` has the subtree `1 
 
 ## Main logical optimizations
 
-| Rule | Effect |
-|---|---|
-| **Predicate pushdown** | Moves a `filter` as close as possible to the data source (even into the Parquet reader), so less data is read |
-| **Column pruning** | Reads only the columns the query needs. This is why `select *` is a bad habit on columnar files |
-| **Constant folding** | Computes constant expressions once at planning time |
-| **Boolean simplification** | Simplifies conditions, for example `true AND x` becomes `x` |
-| **Combine and reorder filters** | Merges adjacent filters and `select`s into one |
-| **Null propagation** | Replaces expressions that are always null by a null literal |
-| **Limit pushdown** | Pushes `limit` below operators such as `union` and some joins |
-| **Join reordering** | Chooses the join order that creates smaller intermediate results (needs the cost-based optimizer) |
+| Rule                            | Effect                                                                                                        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Predicate pushdown**          | Moves a `filter` as close as possible to the data source (even into the Parquet reader), so less data is read |
+| **Column pruning**              | Reads only the columns the query needs. This is why `select *` is a bad habit on columnar files               |
+| **Constant folding**            | Computes constant expressions once at planning time                                                           |
+| **Boolean simplification**      | Simplifies conditions, for example `true AND x` becomes `x`                                                   |
+| **Combine and reorder filters** | Merges adjacent filters and `select`s into one                                                                |
+| **Null propagation**            | Replaces expressions that are always null by a null literal                                                   |
+| **Limit pushdown**              | Pushes `limit` below operators such as `union` and some joins                                                 |
+| **Join reordering**             | Chooses the join order that creates smaller intermediate results (needs the cost-based optimizer)             |
 
 ## Rule-based and cost-based
 

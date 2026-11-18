@@ -187,7 +187,7 @@ flowchart TD
 | **Dataset** | Typed DataFrame (Scala and Java) |
 | **RDD** | Low level. No automatic optimization |
 
-- **Catalyst**: rewrites the query plan (predicate pushdown, column pruning, join choice). See [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- **Catalyst**: rewrites the query plan (predicate pushdown, column pruning, join choice). See [[Catalyst (plan builder)|Catalyst (plan]]
 - **Tungsten**: compact memory layout and whole-stage code generation
 - **AQE**: re-optimizes the plan **while it runs**, using real statistics
 
@@ -404,5 +404,5 @@ Validate between layers with [[data quality]] checks.
 
 ## Links
 
-- [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- [[Catalyst (plan builder)|Catalyst (plan]]
 - [[data architecture/Apache Spark/sql and optimization/Spark Joins.md|Spark Joins]]

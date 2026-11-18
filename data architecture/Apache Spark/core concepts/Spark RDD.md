@@ -86,7 +86,7 @@ df.rdd                                           # from a DataFrame (an RDD of R
 spark.createDataFrame(rdd, schema)               # back to a DataFrame, with a schema
 ```
 
-Going from `df.rdd` back to a DataFrame needs a schema, and the optimizer works only on the DataFrame parts **before and after** the RDD step. See [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]].
+Going from `df.rdd` back to a DataFrame needs a schema, and the optimizer works only on the DataFrame parts **before and after** the RDD step. See [[Catalyst (plan builder)|Catalyst (plan]].
 
 ## Persistence
 
@@ -173,5 +173,5 @@ Otherwise, use DataFrames and SQL.
 - [[data architecture/Apache Spark/core concepts/Spark Lazy Evaluation.md|Spark Lazy Evaluation]]
 - [[data architecture/Apache Spark/core concepts/Spark Narrow Transformations.md|Spark Narrow Transformations]]
 - [[data architecture/Apache Spark/core concepts/Spark Wide Transformations.md|Spark Wide Transformations]]
-- [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- [[Catalyst (plan builder)|Catalyst (plan]]
 - [[data architecture/Apache Spark/sql and optimization/Spark UDFs.md|Spark UDFs]]

@@ -7,7 +7,7 @@ Trabalha no monitoramento de ambientes
 
 Generative AI can help SRE in:
 - Conversational diagnostic
-- [[Runbooks]] and [[postmorten]]
+- [[software architecture/SRE/Runbooks.md|Runbooks]] and [[postmorten]]
 - Operational Agent troubleshooting
 
 ## Four Golden Signals

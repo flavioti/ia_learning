@@ -302,6 +302,8 @@ Rules:
 - **Generate it with a script** (Python, kept outside the vault, for example in `/tmp`) instead of writing the JSON by hand, and keep the layout simple: a title, grouped boxes by role, labeled arrows and a numbered flow.
 - **Check the result:** validate the JSON, make sure bound text fits its box (shorter labels, since text wraps inside a container), and render a quick preview before reporting. Say clearly that it was not opened in Obsidian when that is the case.
 - Reference example: `data architecture/Apache Spark/Spark Architecture.excalidraw.md`.
+- **Backup before every change (mandatory):** before editing any Excalidraw file, copy it to `.backup/` at the vault root, with the file name and a timestamp, for example `.backup/lag and lead.excalidraw.md.2026-11-18-0810.bak`. The folder is git-ignored. Do this before the edit procedure below, so a previous version can always be restored.
+- **Edit procedure (mandatory):** every time an Excalidraw drawing is edited, (1) close its tab in Obsidian, (2) edit the file, (3) reopen it. An open view saves its in-memory copy over the edit, and closing the tab also saves it, so close first and edit only after it is closed. To close it with the CLI, run `obsidian vault="ia_learning" tabs` to find the tab, then detach it with `eval`, as in `app.workspace.getLeavesOfType('excalidraw')`, filtered by `view.file.path`.
 
 ---
 

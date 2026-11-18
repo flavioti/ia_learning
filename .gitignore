@@ -12,6 +12,7 @@
 .env
 **/2026-*-*.md
 **/*.png
+!software architecture/concepts/Big O Notation growth.png
 **/*TODO*.md
 **/*temp*
 **/interviews
@@ -19,3 +20,6 @@
 .claudian/
 .vscode/
 .obsidian/
+tarefas/
+.backup/
+Excalidraw/Scripts/

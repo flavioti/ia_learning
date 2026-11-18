@@ -49,7 +49,7 @@ flowchart LR
 
 1. Each transformation adds a node to the **logical plan**, a graph of steps (the **lineage**). Nothing is read or computed yet.
 2. An **action** is called.
-3. Spark's optimizer, [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]], rewrites the whole plan and picks a physical plan.
+3. Spark's optimizer, [[Catalyst (plan builder)|Catalyst (plan]], rewrites the whole plan and picks a physical plan.
 4. Spark cuts the plan into **stages** at each shuffle, and runs one **task** per partition. Each action creates one **job**.
 
 ## Why Spark is lazy
@@ -115,4 +115,4 @@ flowchart LR
 
 - [[data architecture/Apache Spark/core concepts/Spark Narrow Transformations.md|Spark Narrow Transformations]]
 - [[data architecture/Apache Spark/core concepts/Spark Wide Transformations.md|Spark Wide Transformations]]
-- [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- [[Catalyst (plan builder)|Catalyst (plan]]

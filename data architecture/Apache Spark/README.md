@@ -24,7 +24,7 @@ How Spark executes work.
 
 The query layer: the optimizer, joins and functions.
 
-- [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- [[Catalyst (plan builder)|Catalyst (plan]]
 - [[data architecture/Apache Spark/sql and optimization/Spark Joins.md|Spark Joins]]
 - [[data architecture/Apache Spark/sql and optimization/Spark UDFs.md|Spark UDFs]]
 

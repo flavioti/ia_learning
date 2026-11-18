@@ -97,6 +97,8 @@ flowchart LR
 | **Dataset** | Typed DataFrame for Scala and Java |
 | **RDD** | Low-level distributed collection. Gives control, but no automatic optimization. Use it rarely |
 
+Comparison of the three in detail: [[data architecture/Apache Spark/core concepts/Spark RDD DataFrame Dataset|Spark RDD, DataFrame and Dataset]].
+
 ```python
 from pyspark.sql import SparkSession, functions as F
 
@@ -119,7 +121,7 @@ Use the built-in functions in `pyspark.sql.functions`, not Python code, whenever
 ## Catalyst and Tungsten
 
 - **Catalyst optimizer:** turns your query into a logical plan, optimizes it (predicate pushdown, column pruning, join reordering, constant folding), then picks a physical plan. See the plan with `df.explain()`.
-- **Tungsten:** efficient binary memory layout and **whole-stage code generation**, so Spark compiles a stage into tight JVM code.
+- **Tungsten:** efficient binary memory layout and **whole-stage code generation**, so Spark compiles a stage into tight JVM code. Details in [[Tungsten (execution engine)|Tungsten (execution engine)]].
 - **Adaptive Query Execution (AQE):** re-optimizes the plan **while it runs**, using real statistics: it coalesces small shuffle partitions, switches a join to a broadcast join and splits skewed partitions. It is on by default in recent versions.
 
 ## Modules
@@ -256,7 +258,7 @@ The Spark UI (port 4040 for a running application) is the main tool to find the 
 - When would you choose Spark over Flink or a data warehouse?
 
 ## Links
-- [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- [[Catalyst (plan builder)|Catalyst (plan]]
 - [[data architecture/Apache Spark/sql and optimization/Spark Joins.md|Spark Joins]]
 - [[data architecture/Apache Spark/sql and optimization/Spark UDFs.md|Spark UDFs]]
 - [[data architecture/Apache Spark/core concepts/Spark RDD.md|Spark RDD]]

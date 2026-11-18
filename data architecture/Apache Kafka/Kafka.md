@@ -5,7 +5,7 @@ aliases:
 ---
 A partir da versão 4.0, o [[Zookeeper (deprecated)]] foi removido
 
-![[architecture.excalidraw|1024]]
+![[Topics.excalidraw|1024]]
 
 ## Links
 

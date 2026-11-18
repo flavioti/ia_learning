@@ -57,7 +57,7 @@ flowchart LR
 ```
 
 - **Serialization:** a Python UDF sends rows from the JVM to a separate **Python process** and back, row by row (pickle). A pandas UDF sends **Arrow batches**, which is much cheaper, but the data still crosses the boundary.
-- **Black box for Catalyst:** it cannot push a filter through the UDF, prune columns inside it, reorder it or generate code for it. See [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]].
+- **Black box for Catalyst:** it cannot push a filter through the UDF, prune columns inside it, reorder it or generate code for it. See [[Catalyst (plan builder)|Catalyst (plan]].
 - **No whole-stage code generation** across the UDF, so the tight JVM loop is broken.
 - **Python interpreter speed** for the logic itself.
 - **Extra memory:** Python workers run **outside the JVM heap**, so they need more `memoryOverhead`. See [[data architecture/Apache Spark/common errors/Spark OutOfMemoryError.md|Spark OutOfMemoryError]].
@@ -165,6 +165,6 @@ df.withColumn("prices_usd", F.transform("prices", lambda p: p * F.lit(0.2)))
 
 ## Related
 
-- [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- [[Catalyst (plan builder)|Catalyst (plan]]
 - [[data architecture/Apache Spark/core concepts/Spark Narrow Transformations.md|Spark Narrow Transformations]]
 - [[data architecture/Apache Spark/common errors/Spark OutOfMemoryError.md|Spark OutOfMemoryError]]

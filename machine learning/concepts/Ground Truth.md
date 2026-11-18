@@ -360,3 +360,7 @@ Tempo Real       Latência de dias/semanas
 | **Alternativa** | Proxy metrics, weak labels |
 
 **Ground Truth é o alicerce de ML. Sem ela, não dá pra saber se está funcionando!** 📊
+
+## Links
+
+- [[machine learning/feature store/Ground Truth Store|Ground Truth Store]]

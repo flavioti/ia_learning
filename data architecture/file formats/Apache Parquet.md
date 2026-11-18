@@ -112,7 +112,7 @@ print(meta.num_row_groups, meta.num_rows)
 table = pq.read_table("orders.parquet", columns=["amount"])   # column pruning
 ```
 
-See [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]] for how Spark pushes filters and prunes columns, and [[data architecture/Apache Spark/core concepts/Spark Repartition.md|Spark Repartition]] for controlling the number and size of output files.
+See [[Catalyst (plan builder)|Catalyst (plan]] for how Spark pushes filters and prunes columns, and [[data architecture/Apache Spark/core concepts/Spark Repartition.md|Spark Repartition]] for controlling the number and size of output files.
 
 ## Best practices
 

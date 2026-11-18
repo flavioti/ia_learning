@@ -8,3 +8,7 @@
 - **PostgreSQL (1996):** To give the project a timeless name that didn't include a specific year, the core team chose **PostgreSQL** to permanently reflect its open-source **SQL** standards.
 
 Because "PostgreSQL" can be difficult to pronounce, the community officially adopted "Postgres" as its official alias.
+
+## Related
+
+- [[data architecture/database trasactional/SQL Dialects/SQL Dialect - PostgreSQL|SQL Dialect - PostgreSQL]]

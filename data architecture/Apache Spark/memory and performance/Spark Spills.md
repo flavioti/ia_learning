@@ -250,4 +250,4 @@ Always compare the **cost and the runtime** before spending memory to remove eve
 
 - [[data architecture/Apache Spark/common errors/Spark OutOfMemoryError.md|Spark OutOfMemoryError]]
 - [[data architecture/Apache Spark/sql and optimization/Spark Joins.md|Spark Joins]]
-- [[data architecture/Apache Spark/sql and optimization/Catalyst.md|Catalyst]]
+- [[Catalyst (plan builder)|Catalyst (plan]]
